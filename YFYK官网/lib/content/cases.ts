@@ -1,0 +1,165 @@
+import type { BaseContent, CaseStudy, ContentSection } from "./types";
+import { siteConfig } from "./home";
+
+const placeholderDescription = "占位介绍：用于展示案例列表、详情页、证据区和转化区的页面效果，后续可替换为真实项目背景与交付说明。";
+const placeholderBackground = "占位介绍：这里展示项目背景、业务挑战、目标用户、内容治理范围与落地约束，方便预览长段落在页面中的排版效果。";
+const placeholderMetrics = [
+  { label: "占位数据指标A", value: "占位数据 128%", note: "占位数据说明：用于展示指标卡片的辅助描述。" },
+  { label: "占位数据指标B", value: "占位数据 64", note: "占位数据说明：用于展示统计口径和来源位置。" },
+  { label: "占位数据指标C", value: "占位数据 3.8x", note: "占位数据说明：用于展示变化结果和阶段成果。" },
+];
+const placeholderTrendData = [
+  { label: "阶段01", value: 28 },
+  { label: "阶段02", value: 44 },
+  { label: "阶段03", value: 62 },
+  { label: "阶段04", value: 78 },
+  { label: "阶段05", value: 92 },
+];
+
+export const caseStudies: CaseStudy[] = [
+  {
+    id: "manufacturing-site-upgrade",
+    slug: "manufacturing-site-upgrade",
+    publicationStatus: "scenario",
+    clientDisplayName: "某医疗器械企业",
+    industry: "医疗器械",
+    category: "GEO官网升级",
+    title: "某医疗器械企业 GEO 官网升级",
+    description: "重构产品中心与技术资料体系，建立 AI 可读的医疗知识信源，提升品牌在医学影像设备相关问题中的引用表现。",
+    href: "/solutions/cases/manufacturing-site-upgrade",
+    coreChallenge: "医学影像设备资料分散在产品页、下载文档和技术文章中，AI 难以稳定识别产品能力、适用场景与资质背书。",
+    outcomeSummary: "建立 AI 可读的医疗知识信源后，品牌在医学影像设备相关问题中的可见度、引用次数和推荐率明显提升。",
+    background: "项目围绕产品中心、技术资料、FAQ 与案例内容进行 GEO 官网升级，梳理公开可引用的医疗器械知识资产，让 AI 在回答医学影像设备相关问题时更容易识别企业能力与合规事实。",
+    relatedServicePaths: ["/ai-friendly-upgrade#geo-audit", "/ai-friendly-upgrade#content-structure", "/ai-friendly-upgrade#authority"],
+    highlights: ["产品中心重构", "技术资料体系化", "医疗知识信源建设"],
+    metrics: [
+      { label: "AI可见度", value: "67%" },
+      { label: "AI引用次数", value: "89次/月" },
+      { label: "品牌推荐率", value: "74%" },
+      { label: "内容覆盖率", value: "82%" },
+    ],
+    trendData: placeholderTrendData,
+    testimonial: { quote: "重构后的官网让产品资料、技术能力与合规信息更容易被客户和 AI 同时理解。", name: "某医疗器械企业", role: "项目负责人" },
+  },
+  {
+    id: "professional-service-geo-native",
+    slug: "professional-service-geo-native",
+    publicationStatus: "scenario",
+    clientDisplayName: "XXX品牌名称02",
+    industry: "占位行业02",
+    category: "占位案例类型02",
+    title: "XXXX案例名称02",
+    description: placeholderDescription,
+    href: "/solutions/cases/professional-service-geo-native",
+    coreChallenge: "占位介绍：用于展示服务型项目的需求、痛点和目标表达。",
+    outcomeSummary: "占位数据：访问、询盘、AI引用等关键指标摘要。",
+    background: placeholderBackground,
+    relatedServicePaths: ["/geo-native-website#ai-brand-site", "/enterprise-knowledge-base#geo-knowledge-center", "/enterprise-knowledge-base#enterprise-terminology"],
+    highlights: ["占位能力01", "占位能力02", "占位能力03"],
+    metrics: placeholderMetrics,
+    trendData: placeholderTrendData,
+    testimonial: { quote: "占位介绍：这里展示客户证言的排版效果，后续替换为真实授权内容。", name: "XXX品牌名称02", role: "占位职务" },
+  },
+  {
+    id: "global-multilingual-source",
+    slug: "global-multilingual-source",
+    publicationStatus: "scenario",
+    clientDisplayName: "XXX品牌名称03",
+    industry: "占位行业03",
+    category: "占位案例类型03",
+    title: "XXXX案例名称03",
+    description: placeholderDescription,
+    href: "/solutions/cases/global-multilingual-source",
+    coreChallenge: "占位介绍：用于展示多语言、跨区域或复杂内容治理场景的挑战。",
+    outcomeSummary: "占位数据：多语言覆盖、检索命中、内容复用等结果摘要。",
+    background: placeholderBackground,
+    relatedServicePaths: ["/geo-native-website#ai-global-site", "/enterprise-knowledge-base#enterprise-terminology", "/enterprise-knowledge-base#delivery-standards"],
+    highlights: ["占位能力01", "占位能力02", "占位能力03"],
+    metrics: placeholderMetrics,
+    trendData: placeholderTrendData,
+    testimonial: { quote: "占位介绍：这里展示客户证言的排版效果，后续替换为真实授权内容。", name: "XXX品牌名称03", role: "占位职务" },
+  },
+  {
+    id: "brand-authority-source",
+    slug: "brand-authority-source",
+    publicationStatus: "scenario",
+    clientDisplayName: "XXX品牌名称04",
+    industry: "占位行业04",
+    category: "占位案例类型04",
+    title: "XXXX案例名称04",
+    description: placeholderDescription,
+    href: "/solutions/cases/brand-authority-source",
+    coreChallenge: "占位介绍：用于展示品牌事实、信任证据和引用路径的挑战说明。",
+    outcomeSummary: "占位数据：品牌词覆盖、证据页面、引用路径等结果摘要。",
+    background: placeholderBackground,
+    relatedServicePaths: ["/geo-native-website#ai-brand-site", "/ai-friendly-upgrade#authority", "/enterprise-knowledge-base#geo-knowledge-center"],
+    highlights: ["占位能力01", "占位能力02", "占位能力03"],
+    metrics: placeholderMetrics,
+    trendData: placeholderTrendData,
+    testimonial: { quote: "占位介绍：这里展示客户证言的排版效果，后续替换为真实授权内容。", name: "XXX品牌名称04", role: "占位职务" },
+  },
+  {
+    id: "agent-recommendation-portal",
+    slug: "agent-recommendation-portal",
+    publicationStatus: "scenario",
+    clientDisplayName: "XXX品牌名称05",
+    industry: "占位行业05",
+    category: "占位案例类型05",
+    title: "XXXX案例名称05",
+    description: placeholderDescription,
+    href: "/solutions/cases/agent-recommendation-portal",
+    coreChallenge: "占位介绍：用于展示客户问题、服务匹配和推荐场景的挑战说明。",
+    outcomeSummary: "占位数据：推荐命中、问答覆盖、路径转化等结果摘要。",
+    background: placeholderBackground,
+    relatedServicePaths: ["/geo-native-website#ai-enterprise-site", "/enterprise-knowledge-base#geo-knowledge-center", "/enterprise-knowledge-base#enterprise-terminology"],
+    highlights: ["占位能力01", "占位能力02", "占位能力03"],
+    metrics: placeholderMetrics,
+    trendData: placeholderTrendData,
+    testimonial: { quote: "占位介绍：这里展示客户证言的排版效果，后续替换为真实授权内容。", name: "XXX品牌名称05", role: "占位职务" },
+  },
+  {
+    id: "knowledge-operation-platform",
+    slug: "knowledge-operation-platform",
+    publicationStatus: "scenario",
+    clientDisplayName: "XXX品牌名称06",
+    industry: "占位行业06",
+    category: "占位案例类型06",
+    title: "XXXX案例名称06",
+    description: placeholderDescription,
+    href: "/solutions/cases/knowledge-operation-platform",
+    coreChallenge: "占位介绍：用于展示运营机制、版本管理和持续监测的挑战说明。",
+    outcomeSummary: "占位数据：更新频次、监测任务、知识块数量等结果摘要。",
+    background: placeholderBackground,
+    relatedServicePaths: ["/ai-friendly-upgrade#monitoring", "/enterprise-knowledge-base#delivery-standards", "/ai-friendly-upgrade#mcp-basic"],
+    highlights: ["占位能力01", "占位能力02", "占位能力03"],
+    metrics: placeholderMetrics,
+    trendData: placeholderTrendData,
+    testimonial: { quote: "占位介绍：这里展示客户证言的排版效果，后续替换为真实授权内容。", name: "XXX品牌名称06", role: "占位职务" },
+  },
+];
+
+export function getCaseStudy(slug: string) {
+  return caseStudies.find((item) => item.slug === slug);
+}
+
+export function getCaseStudyContent(caseStudy: CaseStudy): BaseContent {
+  const evidenceState = "当前为占位案例内容，用于展示页面结构、数据卡片、趋势图表、引用记录与证言模块效果。";
+  const sections: ContentSection[] = [
+    { id: "case-overview", aiChunk: "case-overview", title: "项目概览", summary: caseStudy.description, body: `${caseStudy.description}\n\n行业：${caseStudy.industry}\n\n核心挑战：${caseStudy.coreChallenge}\n\n成果状态：${caseStudy.outcomeSummary}` },
+    { id: "background-and-challenge", aiChunk: "background-and-challenge", title: "背景与挑战", summary: caseStudy.coreChallenge, body: caseStudy.background },
+    { id: "case-solution", aiChunk: "case-solution", title: "我们的解决方案", summary: "根据项目场景组合优服优科产品与服务。", body: caseStudy.relatedServicePaths.map((path) => `- ${path}`).join("\n") },
+    { id: "results-and-evidence", aiChunk: "results-and-evidence", title: "成果与证据", summary: evidenceState, body: evidenceState },
+    { id: "ai-citation-records", aiChunk: "ai-citation-records", title: "AI引用实录", summary: evidenceState, body: evidenceState },
+    { id: "client-testimonial", aiChunk: "client-testimonial", title: "客户证言", summary: evidenceState, body: evidenceState },
+  ];
+  return {
+    id: `case-${caseStudy.slug}`,
+    metadata: {
+      title: `${caseStudy.title} | 标杆案例库 | 优服优科`,
+      summary: caseStudy.description,
+      dateModified: siteConfig.dateModified,
+      version: siteConfig.version,
+    },
+    sections,
+  };
+}

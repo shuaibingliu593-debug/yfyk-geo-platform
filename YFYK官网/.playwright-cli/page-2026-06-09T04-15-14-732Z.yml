@@ -1,0 +1,446 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "优服优科首页" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e5]: "Y"
+        - generic [ref=e6]:
+          - strong [ref=e7]: 优服优科
+          - generic [ref=e8]: AI READY BUSINESS
+      - navigation "主导航" [ref=e9]:
+        - list [ref=e10]:
+          - listitem [ref=e11]:
+            - link "首页" [ref=e13] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e14]:
+            - link "产品&服务" [ref=e16] [cursor=pointer]:
+              - /url: /services
+          - listitem [ref=e17]:
+            - link "解决方案&案例" [ref=e19] [cursor=pointer]:
+              - /url: /solutions
+          - listitem [ref=e20]:
+            - link "关于我们" [ref=e22] [cursor=pointer]:
+              - /url: /about
+          - listitem [ref=e23]:
+            - link "联系我们" [ref=e25] [cursor=pointer]:
+              - /url: /contact
+        - link "获取方案" [ref=e26] [cursor=pointer]:
+          - /url: /contact
+  - main [ref=e27]:
+    - generic [ref=e31]:
+      - generic [ref=e36]:
+        - paragraph [ref=e37]: AI READY WEBSITE · GEO OPTIMIZATION
+        - heading "构建全球 AI 兼容的友好度体系" [level=1] [ref=e38]
+        - paragraph [ref=e40]: 源自我们对完整方法论的实践，让企业知识被精准理解与引用
+        - link "探索技术方案" [ref=e41] [cursor=pointer]:
+          - /url: tel:021-61432118
+          - generic [ref=e42]: 探索技术方案
+          - img [ref=e44]
+      - generic [ref=e46]:
+        - generic "兼容的主流AI平台" [ref=e48]:
+          - generic [ref=e49]:
+            - img [ref=e50]
+            - text: ChatGPT
+          - generic [ref=e52]:
+            - img [ref=e53]
+            - text: Claude
+          - generic [ref=e55]:
+            - img [ref=e56]
+            - text: Gemini
+          - generic [ref=e58]:
+            - img [ref=e59]
+            - text: DeepSeek
+          - generic [ref=e62]:
+            - img [ref=e63]
+            - text: Kimi
+          - generic [ref=e66]:
+            - img [ref=e67]
+            - text: 豆包
+          - generic [ref=e70]:
+            - img [ref=e71]
+            - text: 文心一言
+          - generic [ref=e76]:
+            - img [ref=e77]
+            - text: 通义千问
+          - generic [ref=e80]:
+            - img [ref=e81]
+            - text: 腾讯元宝
+        - generic "Banner 切换" [ref=e84]:
+          - button "切换到 Banner 1：构建全球 AI 兼容的友好度体系" [pressed] [ref=e85] [cursor=pointer]
+          - button "切换到 Banner 2：打造 AI 首选的企业知识源" [ref=e87] [cursor=pointer]
+          - button "切换到 Banner 3：建立 AI 时代的品牌信任" [ref=e88] [cursor=pointer]
+          - button "切换到 Banner 4：别让 AI 把客户“截胡”了" [ref=e89] [cursor=pointer]
+    - generic [ref=e91]:
+      - paragraph [ref=e92]: 企业级 GEO 建设实践
+      - generic "企业级 GEO 建设实践数据" [ref=e93]:
+        - article [ref=e94]:
+          - strong [ref=e95]: 0+
+          - generic [ref=e96]: 企业服务经验
+        - article [ref=e97]:
+          - strong [ref=e98]: 0+
+          - generic [ref=e99]: 覆盖行业
+        - article [ref=e100]:
+          - strong [ref=e101]: 0万+
+          - generic [ref=e102]: 知识资产节点
+        - article [ref=e103]:
+          - strong [ref=e104]: 0万+
+          - generic [ref=e105]: Schema实体部署
+    - generic [ref=e108]:
+      - generic [ref=e109]:
+        - tablist "三大业务技术大纲" [ref=e110]:
+          - tab "老站 GEO 升级" [selected] [ref=e111] [cursor=pointer]
+          - tab "新一代 GEO 官网" [ref=e112] [cursor=pointer]
+          - tab "企业 AI 知识库构建" [ref=e113] [cursor=pointer]
+        - paragraph [ref=e114]: 三大解决方案（OUR SOLUTIONS）
+        - heading "让现有网站适配生成式搜索时代" [level=2] [ref=e116]
+        - paragraph [ref=e117]: 不必推翻现有数字资产。通过系统化 GEO 升级，让老网站拥有更清晰的语义结构和更高的 AI 可见度。
+      - generic [ref=e119]:
+        - button "01 GEO 策略与审计 先给你出一份“AI体检报告”——你的网站在DeepSeek、文心一言、Kimi眼里长什么样？哪里被忽略了？竞争对手为什么被推荐？我们把这些缺口一次性列清楚。 查看具体交付物与成效 ↓" [ref=e120] [cursor=pointer]:
+          - generic [ref=e121]: "01"
+          - generic [ref=e122]:
+            - heading "GEO 策略与审计" [level=3] [ref=e123]
+            - paragraph [ref=e124]: 先给你出一份“AI体检报告”——你的网站在DeepSeek、文心一言、Kimi眼里长什么样？哪里被忽略了？竞争对手为什么被推荐？我们把这些缺口一次性列清楚。
+          - img [ref=e126]
+          - emphasis: 查看具体交付物与成效 ↓
+        - button "02 内容结构化重塑 把你现有的产品页、文章、案例，加上AI能读懂的语言标签。以后AI抓取时，不会再看错、漏掉关键信息，而是精准提取你的型号、参数、应用场景。 查看具体交付物与成效 ↓" [ref=e128] [cursor=pointer]:
+          - generic [ref=e129]: "02"
+          - generic [ref=e130]:
+            - heading "内容结构化重塑" [level=3] [ref=e131]
+            - paragraph [ref=e132]: 把你现有的产品页、文章、案例，加上AI能读懂的语言标签。以后AI抓取时，不会再看错、漏掉关键信息，而是精准提取你的型号、参数、应用场景。
+          - img [ref=e134]
+          - emphasis: 查看具体交付物与成效 ↓
+        - button "03 权威背书强化 把你公司的资质、行业认证、第三方报道，变成AI认可的“信任凭证”。AI在回答问题时，会更倾向于引用你的内容，而不是随便找个竞品。 查看具体交付物与成效 ↓" [ref=e136] [cursor=pointer]:
+          - generic [ref=e137]: "03"
+          - generic [ref=e138]:
+            - heading "权威背书强化" [level=3] [ref=e139]
+            - paragraph [ref=e140]: 把你公司的资质、行业认证、第三方报道，变成AI认可的“信任凭证”。AI在回答问题时，会更倾向于引用你的内容，而不是随便找个竞品。
+          - img [ref=e142]
+          - emphasis: 查看具体交付物与成效 ↓
+        - button "04 GEO 监测与报告 每个月告诉你：你的网站在各大AI模型里被提到了几次？被问了哪些问题？和上个月比是涨是跌？每一分投入都能看到回报。 查看具体交付物与成效 ↓" [ref=e144] [cursor=pointer]:
+          - generic [ref=e145]: "04"
+          - generic [ref=e146]:
+            - heading "GEO 监测与报告" [level=3] [ref=e147]
+            - paragraph [ref=e148]: 每个月告诉你：你的网站在各大AI模型里被提到了几次？被问了哪些问题？和上个月比是涨是跌？每一分投入都能看到回报。
+          - img [ref=e150]
+          - emphasis: 查看具体交付物与成效 ↓
+        - button "05 基础 MCP 接口集成 为你的网站开一扇“门”，让企业微信、钉钉里的AI助手能直接查你的产品信息。客户问AI“你们的XX产品有货吗”，AI能实时给出答案。 查看具体交付物与成效 ↓" [ref=e152] [cursor=pointer]:
+          - generic [ref=e153]: "05"
+          - generic [ref=e154]:
+            - heading "基础 MCP 接口集成" [level=3] [ref=e155]
+            - paragraph [ref=e156]: 为你的网站开一扇“门”，让企业微信、钉钉里的AI助手能直接查你的产品信息。客户问AI“你们的XX产品有货吗”，AI能实时给出答案。
+          - img [ref=e158]
+          - emphasis: 查看具体交付物与成效 ↓
+    - generic [ref=e161]:
+      - generic [ref=e162]:
+        - generic [ref=e163]:
+          - paragraph [ref=e164]: FEATURED CASES
+          - heading "从典型场景开始建设AI信源" [level=2] [ref=e166]
+        - paragraph [ref=e167]: 以可验证的企业事实为基础，围绕不同业务场景建立清晰、可信、可持续运营的 AI 知识入口。
+      - generic [ref=e168]:
+        - link "XXX 示例图 医疗器械 GEO官网升级 某医疗器械企业 GEO 官网升级 重构产品中心与技术资料体系，建立 AI 可读的医疗知识信源，提升品牌在医学影像设备相关问题中的引用表现。 67% AI可见度 89次/月 AI引用次数 74% 品牌推荐率 82% 内容覆盖率 查看详情" [ref=e169] [cursor=pointer]:
+          - /url: /solutions/cases/manufacturing-site-upgrade
+          - generic [ref=e171]:
+            - generic [ref=e173]: XXX
+            - generic [ref=e174]: 示例图
+          - generic [ref=e175]:
+            - generic [ref=e176]: 医疗器械
+            - generic [ref=e177]: GEO官网升级
+          - heading "某医疗器械企业 GEO 官网升级" [level=3] [ref=e178]
+          - paragraph [ref=e179]: 重构产品中心与技术资料体系，建立 AI 可读的医疗知识信源，提升品牌在医学影像设备相关问题中的引用表现。
+          - generic [ref=e180]:
+            - generic [ref=e181]:
+              - generic [ref=e182]: 67%
+              - generic [ref=e183]: AI可见度
+            - generic [ref=e184]:
+              - generic [ref=e185]: 89次/月
+              - generic [ref=e186]: AI引用次数
+            - generic [ref=e187]:
+              - generic [ref=e188]: 74%
+              - generic [ref=e189]: 品牌推荐率
+            - generic [ref=e190]:
+              - generic [ref=e191]: 82%
+              - generic [ref=e192]: 内容覆盖率
+          - generic [ref=e193]:
+            - text: 查看详情
+            - img [ref=e194]
+        - link "XXX 示例图 占位行业02 占位案例类型02 XXXX案例名称02 占位介绍：用于展示案例列表、详情页、证据区和转化区的页面效果，后续可替换为真实项目背景与交付说明。 占位数据 128% 占位数据指标A 占位数据 64 占位数据指标B 占位数据 3.8x 占位数据指标C 查看详情" [ref=e196] [cursor=pointer]:
+          - /url: /solutions/cases/professional-service-geo-native
+          - generic [ref=e198]:
+            - generic [ref=e200]: XXX
+            - generic [ref=e201]: 示例图
+          - generic [ref=e202]:
+            - generic [ref=e203]: 占位行业02
+            - generic [ref=e204]: 占位案例类型02
+          - heading "XXXX案例名称02" [level=3] [ref=e205]
+          - paragraph [ref=e206]: 占位介绍：用于展示案例列表、详情页、证据区和转化区的页面效果，后续可替换为真实项目背景与交付说明。
+          - generic [ref=e207]:
+            - generic [ref=e208]:
+              - generic [ref=e209]: 占位数据 128%
+              - generic [ref=e210]: 占位数据指标A
+            - generic [ref=e211]:
+              - generic [ref=e212]: 占位数据 64
+              - generic [ref=e213]: 占位数据指标B
+            - generic [ref=e214]:
+              - generic [ref=e215]: 占位数据 3.8x
+              - generic [ref=e216]: 占位数据指标C
+          - generic [ref=e217]:
+            - text: 查看详情
+            - img [ref=e218]
+        - link "XXX 示例图 占位行业03 占位案例类型03 XXXX案例名称03 占位介绍：用于展示案例列表、详情页、证据区和转化区的页面效果，后续可替换为真实项目背景与交付说明。 占位数据 128% 占位数据指标A 占位数据 64 占位数据指标B 占位数据 3.8x 占位数据指标C 查看详情" [ref=e220] [cursor=pointer]:
+          - /url: /solutions/cases/global-multilingual-source
+          - generic [ref=e222]:
+            - generic [ref=e224]: XXX
+            - generic [ref=e225]: 示例图
+          - generic [ref=e226]:
+            - generic [ref=e227]: 占位行业03
+            - generic [ref=e228]: 占位案例类型03
+          - heading "XXXX案例名称03" [level=3] [ref=e229]
+          - paragraph [ref=e230]: 占位介绍：用于展示案例列表、详情页、证据区和转化区的页面效果，后续可替换为真实项目背景与交付说明。
+          - generic [ref=e231]:
+            - generic [ref=e232]:
+              - generic [ref=e233]: 占位数据 128%
+              - generic [ref=e234]: 占位数据指标A
+            - generic [ref=e235]:
+              - generic [ref=e236]: 占位数据 64
+              - generic [ref=e237]: 占位数据指标B
+            - generic [ref=e238]:
+              - generic [ref=e239]: 占位数据 3.8x
+              - generic [ref=e240]: 占位数据指标C
+          - generic [ref=e241]:
+            - text: 查看详情
+            - img [ref=e242]
+        - link "XXX 示例图 占位行业04 占位案例类型04 XXXX案例名称04 占位介绍：用于展示案例列表、详情页、证据区和转化区的页面效果，后续可替换为真实项目背景与交付说明。 占位数据 128% 占位数据指标A 占位数据 64 占位数据指标B 占位数据 3.8x 占位数据指标C 查看详情" [ref=e244] [cursor=pointer]:
+          - /url: /solutions/cases/brand-authority-source
+          - generic [ref=e246]:
+            - generic [ref=e248]: XXX
+            - generic [ref=e249]: 示例图
+          - generic [ref=e250]:
+            - generic [ref=e251]: 占位行业04
+            - generic [ref=e252]: 占位案例类型04
+          - heading "XXXX案例名称04" [level=3] [ref=e253]
+          - paragraph [ref=e254]: 占位介绍：用于展示案例列表、详情页、证据区和转化区的页面效果，后续可替换为真实项目背景与交付说明。
+          - generic [ref=e255]:
+            - generic [ref=e256]:
+              - generic [ref=e257]: 占位数据 128%
+              - generic [ref=e258]: 占位数据指标A
+            - generic [ref=e259]:
+              - generic [ref=e260]: 占位数据 64
+              - generic [ref=e261]: 占位数据指标B
+            - generic [ref=e262]:
+              - generic [ref=e263]: 占位数据 3.8x
+              - generic [ref=e264]: 占位数据指标C
+          - generic [ref=e265]:
+            - text: 查看详情
+            - img [ref=e266]
+        - link "XXX 示例图 占位行业05 占位案例类型05 XXXX案例名称05 占位介绍：用于展示案例列表、详情页、证据区和转化区的页面效果，后续可替换为真实项目背景与交付说明。 占位数据 128% 占位数据指标A 占位数据 64 占位数据指标B 占位数据 3.8x 占位数据指标C 查看详情" [ref=e268] [cursor=pointer]:
+          - /url: /solutions/cases/agent-recommendation-portal
+          - generic [ref=e270]:
+            - generic [ref=e272]: XXX
+            - generic [ref=e273]: 示例图
+          - generic [ref=e274]:
+            - generic [ref=e275]: 占位行业05
+            - generic [ref=e276]: 占位案例类型05
+          - heading "XXXX案例名称05" [level=3] [ref=e277]
+          - paragraph [ref=e278]: 占位介绍：用于展示案例列表、详情页、证据区和转化区的页面效果，后续可替换为真实项目背景与交付说明。
+          - generic [ref=e279]:
+            - generic [ref=e280]:
+              - generic [ref=e281]: 占位数据 128%
+              - generic [ref=e282]: 占位数据指标A
+            - generic [ref=e283]:
+              - generic [ref=e284]: 占位数据 64
+              - generic [ref=e285]: 占位数据指标B
+            - generic [ref=e286]:
+              - generic [ref=e287]: 占位数据 3.8x
+              - generic [ref=e288]: 占位数据指标C
+          - generic [ref=e289]:
+            - text: 查看详情
+            - img [ref=e290]
+      - link "查看更多案例" [ref=e293] [cursor=pointer]:
+        - /url: /solutions/cases
+        - text: 查看更多案例
+        - img [ref=e294]
+    - region "GEO 建设服务流程" [ref=e298]:
+      - generic [ref=e299]:
+        - heading "GEO 建设服务流程" [level=2] [ref=e300]
+        - paragraph [ref=e301]: 从诊断评估到语义部署、知识建设与持续运营， 形成可验收、可追踪的企业级 GEO 交付路径。
+      - generic [ref=e302]:
+        - img
+        - list [ref=e304]:
+          - listitem [ref=e305]:
+            - article [ref=e307]:
+              - img [ref=e310]
+              - generic [ref=e312]:
+                - generic [ref=e313]: STEP 01
+                - heading "项目启动" [level=3] [ref=e314]
+                - paragraph [ref=e315]: 需求梳理 · 目标确认 · 场景规划
+            - article [ref=e317]:
+              - img [ref=e320]
+              - generic [ref=e324]:
+                - generic [ref=e325]: STEP 02
+                - heading "GEO 诊断" [level=3] [ref=e326]
+                - paragraph [ref=e327]: 官网检测 · AI 信号检查 · 标准端点检测
+            - article [ref=e329]:
+              - img [ref=e332]
+              - generic [ref=e336]:
+                - generic [ref=e337]: STEP 03
+                - heading "竞品分析" [level=3] [ref=e338]
+                - paragraph [ref=e339]: 引用对比 · 内容缺口 · 优先级判断
+          - listitem [ref=e340]:
+            - article [ref=e342]:
+              - img [ref=e345]
+              - generic [ref=e348]:
+                - generic [ref=e349]: STEP 06
+                - heading "知识建设" [level=3] [ref=e350]
+                - paragraph [ref=e351]: 产品资料 · FAQ 术语 · SSOT 体系
+            - article [ref=e353]:
+              - img [ref=e356]
+              - generic [ref=e359]:
+                - generic [ref=e360]: STEP 05
+                - heading "语义部署" [level=3] [ref=e361]
+                - paragraph [ref=e362]: Schema 标记 · Markdown 内容 · AI Sitemap
+            - article [ref=e364]:
+              - img [ref=e367]
+              - generic [ref=e370]:
+                - generic [ref=e371]: STEP 04
+                - heading "页面优化" [level=3] [ref=e372]
+                - paragraph [ref=e373]: 信息架构 · 核心页面 · 知识块重构
+          - listitem [ref=e374]:
+            - article [ref=e376]:
+              - img [ref=e379]
+              - generic [ref=e384]:
+                - generic [ref=e385]: STEP 07
+                - heading "系统集成" [level=3] [ref=e386]
+                - paragraph [ref=e387]: MCP 接口 · 数据对接 · 权限设置
+            - article [ref=e389]:
+              - img [ref=e392]
+              - generic [ref=e394]:
+                - generic [ref=e395]: STEP 08
+                - heading "持续运营" [level=3] [ref=e396]
+                - paragraph [ref=e397]: 引用监测 · 缺口分析 · 定期优化
+    - generic [ref=e400]:
+      - complementary "全生命周期专业交付工作台" [ref=e401]:
+        - paragraph [ref=e402]: Dynamic Service Workbench
+        - heading "全生命周期专业交付工作台" [level=2] [ref=e403]
+        - tablist "服务工作台模块" [ref=e404]:
+          - tab "01 存量资产 GEO 重塑" [selected] [ref=e405] [cursor=pointer]:
+            - generic [ref=e406]: "01"
+            - text: 存量资产 GEO 重塑
+          - tab "02 专属 AI 知识信源工程" [ref=e407] [cursor=pointer]:
+            - generic [ref=e408]: "02"
+            - text: 专属 AI 知识信源工程
+          - tab "03 全网拦截与持续运维" [ref=e409] [cursor=pointer]:
+            - generic [ref=e410]: "03"
+            - text: 全网拦截与持续运维
+      - tabpanel "01 存量资产 GEO 重塑" [ref=e411]:
+        - generic [ref=e412]:
+          - generic [ref=e413]:
+            - heading "盘活现有官网 · 让 AI 重新读懂你" [level=3] [ref=e414]
+            - paragraph [ref=e415]: 不改你网站的样子，不重写代码。我们通过一次“AI体检”+内容优化，让老网站在DeepSeek、文心一言、Kimi等AI模型眼里，从“隐形人”变成“常驻嘉宾”。
+          - generic [ref=e416]:
+            - article [ref=e417]:
+              - img [ref=e418]
+              - heading "GEO 策略与审计" [level=4] [ref=e421]
+              - paragraph [ref=e422]: 先给你出一份“AI体检报告”——你的网站在主流AI模型里能看到什么？哪里被忽略了？竞争对手为什么总被推荐？缺口一次列清。
+            - article [ref=e423]:
+              - img [ref=e424]
+              - heading "内容结构化重塑" [level=4] [ref=e426]
+              - paragraph [ref=e427]: 给你现有的产品页、文章、案例加上AI能读懂的内容标签。以后AI抓取时，不会再漏掉你的关键参数、型号和应用场景。
+            - article [ref=e428]:
+              - img [ref=e429]
+              - heading "权威语义背书" [level=4] [ref=e432]
+              - paragraph [ref=e433]: 把你公司的资质证书、行业认证、媒体报道，变成AI认可的“信任凭证”。AI在回答问题时，会优先引用你的内容。
+            - article [ref=e434]:
+              - img [ref=e435]
+              - heading "GEO 监测基线" [level=4] [ref=e439]
+              - paragraph [ref=e440]: 每个月告诉你：你的网站在各大AI模型里被提到了几次？被问了哪些问题？转化成本变化了多少？每一分投入都能看到回报。
+          - paragraph [ref=e441]: 💡 实测数据：经6-8周持续优化，目标网站在AI答案中的“可信引用度”平均提升200%以上，长尾获客成本明显下降。
+    - generic [ref=e443]:
+      - generic [ref=e444]:
+        - paragraph [ref=e445]: START TODAY
+        - heading "让您的官网，成为 AI 优先引用的答案" [level=2] [ref=e447]:
+          - text: 让您的官网，成为
+          - text: AI 优先引用的答案
+      - generic [ref=e448]:
+        - paragraph [ref=e449]: 从一次官网 AI 友好度诊断开始，建立企业在生成式搜索时代的官方知识源。
+        - link "拨打 021-61432118" [ref=e450] [cursor=pointer]:
+          - /url: tel:021-61432118
+          - text: 拨打 021-61432118
+          - img [ref=e451]
+  - contentinfo [ref=e453]:
+    - generic [ref=e454]:
+      - generic [ref=e455]:
+        - link "Y 优服优科 AI READY BUSINESS" [ref=e456] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e457]: "Y"
+          - generic [ref=e458]:
+            - strong [ref=e459]: 优服优科
+            - generic [ref=e460]: AI READY BUSINESS
+        - paragraph [ref=e461]: 上海优服优科模型科技有限公司
+        - generic [ref=e462]:
+          - paragraph [ref=e463]:
+            - generic [ref=e464]: 项目询价：
+            - link "021-61432118" [ref=e466] [cursor=pointer]:
+              - /url: tel:021-61432118
+          - paragraph [ref=e467]:
+            - generic [ref=e468]: 技术咨询：
+            - link "18512131234" [ref=e470] [cursor=pointer]:
+              - /url: tel:18512131234
+          - paragraph [ref=e471]:
+            - generic [ref=e472]: 业务邮箱：
+            - link "zhangxiaolong@shyfyk.com" [ref=e474] [cursor=pointer]:
+              - /url: mailto:zhangxiaolong@shyfyk.com
+          - paragraph [ref=e475]:
+            - generic [ref=e476]: 上海总部：
+            - generic [ref=e477]: 上海市嘉定区博乐路70号D栋4楼
+          - paragraph [ref=e478]:
+            - generic [ref=e479]: 武汉办公点：
+            - generic [ref=e480]: 武汉市汉阳区恒大滨江中心3楼
+      - navigation "页脚导航" [ref=e481]:
+        - generic [ref=e482]:
+          - heading "产品&服务" [level=2] [ref=e483]
+          - link "AI企业官网" [ref=e484] [cursor=pointer]:
+            - /url: /services/products/ai-enterprise-site
+          - link "AI品牌官网" [ref=e485] [cursor=pointer]:
+            - /url: /services/products/ai-brand-site
+          - link "AI外贸独立站" [ref=e486] [cursor=pointer]:
+            - /url: /services/products/ai-global-site
+          - link "GEO策略与审计" [ref=e487] [cursor=pointer]:
+            - /url: /services/upgrade#geo-audit
+          - link "企业知识库" [ref=e488] [cursor=pointer]:
+            - /url: /services/knowledge-source
+        - generic [ref=e489]:
+          - heading "解决方案&案例" [level=2] [ref=e490]
+          - link "标杆案例库" [ref=e491] [cursor=pointer]:
+            - /url: /solutions/cases
+          - link "GEO原生建站" [ref=e492] [cursor=pointer]:
+            - /url: /cases/geo-native-website
+          - link "网站AI改造" [ref=e493] [cursor=pointer]:
+            - /url: /cases/website-ai-retrofit
+          - link "知识库信源构建" [ref=e494] [cursor=pointer]:
+            - /url: /cases/knowledge-base
+        - generic [ref=e495]:
+          - heading "知识中心" [level=2] [ref=e496]
+          - link "知识库" [ref=e497] [cursor=pointer]:
+            - /url: /knowledge
+          - link "术语表" [ref=e498] [cursor=pointer]:
+            - /url: /glossary
+          - link "资讯动态" [ref=e499] [cursor=pointer]:
+            - /url: /news
+          - link "FAQ中心" [ref=e500] [cursor=pointer]:
+            - /url: /services#frequently-asked-questions
+        - generic [ref=e501]:
+          - heading "关于我们" [level=2] [ref=e502]
+          - link "公司简介" [ref=e503] [cursor=pointer]:
+            - /url: /about
+          - link "专利&高新技术企业" [ref=e504] [cursor=pointer]:
+            - /url: /about#capabilities
+          - link "联系我们" [ref=e505] [cursor=pointer]:
+            - /url: /contact
+    - generic [ref=e506]:
+      - generic [ref=e507]: © 2026 上海优服优科模型科技有限公司
+      - link "ICP备案号：ICP备案中" [ref=e508] [cursor=pointer]:
+        - /url: https://beian.miit.gov.cn
+      - time [ref=e509]: 更新于 2026-05-31
+      - generic [ref=e510]: AI Friendly Website · GEO · MCP
+  - button "Open Next.js Dev Tools" [ref=e516] [cursor=pointer]:
+    - img [ref=e517]

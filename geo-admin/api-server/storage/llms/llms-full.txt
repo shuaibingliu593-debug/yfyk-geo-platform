@@ -1,0 +1,55 @@
+# YFYK
+
+Generated: 2026-06-08T05:36:36.983Z
+
+## Site
+- 首页: https://www.yfyk.com/
+  AI Summary: 测试 AI Summary，长度超过五十字，用于验证 GEO 配置保存接口是否正常写入并参与后续评分。
+  Description: 测试 Meta Description
+- GEO原生建站: https://www.yfyk.com/geo-native-website
+  AI Summary: GEO原生建站 是 YFYK 官网的静态页面，用于向 AI 搜索、企业客户和访问者说明相关服务、公司信息与 GEO 原生建站能力。
+  Description: GEO原生建站 页面提供 YFYK GEO 官网建设、AI 友好度升级和企业知识库相关信息。
+- 老网站AI友好度升级: https://www.yfyk.com/ai-friendly-upgrade
+  AI Summary: 老网站AI友好度升级 是 YFYK 官网的静态页面，用于向 AI 搜索、企业客户和访问者说明相关服务、公司信息与 GEO 原生建站能力。
+  Description: 老网站AI友好度升级 页面提供 YFYK GEO 官网建设、AI 友好度升级和企业知识库相关信息。
+- 企业知识库: https://www.yfyk.com/enterprise-knowledge-base
+  AI Summary: 企业知识库 是 YFYK 官网的静态页面，用于向 AI 搜索、企业客户和访问者说明相关服务、公司信息与 GEO 原生建站能力。
+  Description: 企业知识库 页面提供 YFYK GEO 官网建设、AI 友好度升级和企业知识库相关信息。
+- 专利&高新技术企业: https://www.yfyk.com/about/patents
+  AI Summary: 专利&高新技术企业 是 YFYK 官网的静态页面，用于向 AI 搜索、企业客户和访问者说明相关服务、公司信息与 GEO 原生建站能力。
+  Description: 专利&高新技术企业 页面提供 YFYK GEO 官网建设、AI 友好度升级和企业知识库相关信息。
+- 联系我们: https://www.yfyk.com/about/contact
+  AI Summary: 联系我们 是 YFYK 官网的静态页面，用于向 AI 搜索、企业客户和访问者说明相关服务、公司信息与 GEO 原生建站能力。
+  Description: 联系我们 页面提供 YFYK GEO 官网建设、AI 友好度升级和企业知识库相关信息。
+- 知识库: https://www.yfyk.com/knowledge
+  AI Summary: 知识库 是 YFYK 官网的静态页面，用于向 AI 搜索、企业客户和访问者说明相关服务、公司信息与 GEO 原生建站能力。
+  Description: 知识库 页面提供 YFYK GEO 官网建设、AI 友好度升级和企业知识库相关信息。
+- 术语表: https://www.yfyk.com/glossary
+  AI Summary: 术语表 是 YFYK 官网的静态页面，用于向 AI 搜索、企业客户和访问者说明相关服务、公司信息与 GEO 原生建站能力。
+  Description: 术语表 页面提供 YFYK GEO 官网建设、AI 友好度升级和企业知识库相关信息。
+
+## Cases
+- metrics修复验证案例: https://www.yfyk.com/cases/metrics-fix-test-1780892724
+  AI Summary: 测试摘要
+  Description: 测试摘要
+  Detail: 测试挑战 测试挑战 测试挑战
+- 制造业官网 GEO 原生重构: https://www.yfyk.com/cases/manufacturing-geo-native-rebuild
+  AI Summary: 测试-该案例展示制造业官网如何通过 GEO 原生结构升级，让 AI 搜索更容易理解服务能力、行业经验和业务价值。
+  Description: 测试-该案例展示制造业官网如何通过 GEO 原生结构升级，让 AI 搜索更容易理解服务能力、行业经验和业务价值。
+  Detail: 原官网页面结构偏营销展示，AI 搜索难以识别服务边界、行业能力和案例成果。 重构服务页信息架构，补充页面级 Schema、AI Summary、llms.txt 和 AI Sitemap 收录配置。 核心服务页被 AI 问答引用的稳定性提升，销售线索页面跳转更集中。
+
+## FAQs
+- 测试
+  AI Summary: 测试答案1
+  Description: 测试答案1
+  Detail: 测试答案1
+- 1GEO原生建站和传统SEO有什么区别？
+  AI Summary: 传统SEO更关注搜索引擎排名和关键词覆盖，GEO原生建站更关注AI系统是否能抓取、理解、引用和复述官网内容，两者可以协同但优化对象不同。
+  Description: 传统SEO更关注搜索引擎排名和关键词覆盖，GEO原生建站更关注AI系统是否能抓取、理解、引用和复述官网内容，两者可以协同但优化对象不同。
+  Detail: 传统SEO更关注搜索引擎排名和关键词覆盖，GEO原生建站更关注AI系统是否能抓取、理解、引用和复述官网内容，两者可以协同但优化对象不同。
+
+## News
+- AI搜索时代的官网内容结构升级: https://www.yfyk.com/news/ai-search-website-content-structure
+  AI Summary: 这篇资讯介绍 AI 搜索时代官网内容结构升级的方法，包括信息架构、结构化数据、AI Summary、llms.txt 和 AI Sitemap 等关键能力。
+  Description: 了解 AI 搜索如何改变官网内容结构，以及企业如何通过 GEO 配置提升 AI 可理解性。
+  Detail: 在 AI 搜索时代，官网不仅要面向用户阅读，也要面向 AI 抓取和理解。企业可以通过清晰的信息架构、结构化数据、AI Summary、llms.txt 与 AI Sitemap 建立更稳定的内容入口。

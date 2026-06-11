@@ -1,0 +1,94 @@
+/* Shared bottom CTA — full-width, compact height */
+.subpage-final-cta {
+  position: relative;
+  overflow: hidden;
+  padding: 56px 0;
+  color: #fff;
+  background: linear-gradient(135deg, #03081a, #071b48 72%, #0b2d78);
+  border-top: 1px solid rgba(111, 156, 255, 0.18);
+}
+
+.subpage-final-cta::after {
+  content: "";
+  position: absolute;
+  right: -80px;
+  bottom: -180px;
+  width: 340px;
+  height: 340px;
+  border: 1px solid rgba(143, 178, 255, 0.2);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 55px rgba(143, 178, 255, 0.04),
+    0 0 0 110px rgba(143, 178, 255, 0.025);
+  pointer-events: none;
+}
+
+.subpage-final-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 32px;
+  align-items: center;
+  padding: 28px 0;
+}
+
+.subpage-final-copy h2 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(26px, 3vw, 36px);
+  line-height: 1.22;
+  letter-spacing: -0.04em;
+}
+
+.subpage-final-copy > p {
+  max-width: 640px;
+  margin: 10px 0 0;
+  color: #d8e4ff;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.subpage-final-actions {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.subpage-final-actions .button {
+  background: var(--blue);
+}
+
+.subpage-final-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #d8e4ff;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  .subpage-final-inner {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 620px) {
+  .subpage-final-cta {
+    padding: 38px 0;
+  }
+
+  .subpage-final-inner {
+    gap: 16px;
+    padding: 15px 0;
+  }
+
+  .subpage-final-copy h2 {
+    font-size: 24px;
+  }
+}

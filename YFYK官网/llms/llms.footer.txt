@@ -1,0 +1,23 @@
+- 案例中心: https://www.shyfyk.com/cases
+- 案例中心 Markdown: https://www.shyfyk.com/cases.md
+- FAQ中心: https://www.shyfyk.com/faq
+- FAQ中心 Markdown: https://www.shyfyk.com/faq.md
+- 资讯动态: https://www.shyfyk.com/news
+- 资讯动态 Markdown: https://www.shyfyk.com/news.md
+- 服务页 Markdown 规则: 在页面 URL 后追加 .md，例如 https://www.shyfyk.com/services/products/ai-enterprise-site.md
+- MCP 端点: https://www.shyfyk.com/api/mcp
+- Sitemap: https://www.shyfyk.com/sitemap.xml
+- AI Sitemap: https://www.shyfyk.com/ai-sitemap.xml
+
+## 中国站点说明
+- 本站首批为企业内容展示与公开事实查询站点，不提供面向公众的生成式 AI 问答。
+- 国内 CDN/WAF 上线时需对白名单爬虫进行访问验证。
+- 涉及境外模型 API、个人信息或重要数据时，必须单独执行数据分类分级与跨境评估。
+
+## 内容凭证
+- 标准: C2PA
+- 状态: 待接入官方签名证书
+- 说明: 当前内容由 https://www.shyfyk.com 动态生成，请以本域名发布版本为准。
+
+## 权威主体
+上海优服优科模型科技有限公司

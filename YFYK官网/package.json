@@ -1,0 +1,33 @@
+{
+  "name": "yfyk-ai-friendly-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "prebuild": "npm run cla-check && npm run sync:static-registry && npm run generate:llms",
+    "sync:static-registry": "mkdir -p lib/geo && cp ../shared/static-pages.ts lib/geo/static-pages-registry.ts && cp ../shared/ai-sitemap-xml.ts lib/geo/ai-sitemap-xml.ts",
+    "generate:llms": "node --experimental-strip-types scripts/generate-llms.mjs",
+    "start": "next start",
+    "lint": "eslint .",
+    "cla-check": "node scripts/cla-check.mjs",
+    "check:static-pages": "node --experimental-strip-types ../shared/scripts/check-static-pages.mjs",
+    "check:faq-content": "node --experimental-strip-types ../shared/scripts/check-faq-content.mjs"
+  },
+  "dependencies": {
+    "next": "^16.2.6",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.0",
+    "@types/node": "^25.9.1",
+    "@types/react": "^19.2.15",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^16.2.6",
+    "postcss": "^8.5.15",
+    "tailwindcss": "^4.3.0",
+    "typescript": "^6.0.3"
+  }
+}

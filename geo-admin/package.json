@@ -1,0 +1,28 @@
+{
+  "name": "geo-admin",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "admin-web",
+    "api-server"
+  ],
+  "scripts": {
+    "dev": "concurrently --no-kill-others-on-fail \"npm run dev -w api-server\" \"npm run dev -w admin-web\"",
+    "build": "npm run build -w api-server && npm run build -w admin-web",
+    "lint": "npm run lint -w admin-web && npm run lint -w api-server",
+    "test:api": "npm run test:api -w api-server",
+    "prisma:generate": "npm run prisma:generate -w api-server",
+    "prisma:migrate": "npm run prisma:migrate -w api-server",
+    "prisma:seed": "npm run prisma:seed -w api-server",
+    "check:static-pages": "node --experimental-strip-types ../shared/scripts/check-static-pages.mjs",
+    "check:faq-content": "node --experimental-strip-types ../shared/scripts/check-faq-content.mjs"
+  },
+  "prisma": {
+    "schema": "api-server/prisma/schema.prisma",
+    "seed": "pnpm --dir api-server prisma db seed"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "prisma": "^5.22.0"
+  }
+}

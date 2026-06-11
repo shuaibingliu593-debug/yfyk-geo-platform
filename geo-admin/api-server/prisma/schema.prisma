@@ -1,0 +1,308 @@
+generator client {
+  provider = "prisma-client-js"
+  binaryTargets = ["native", "debian-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum ContentStatus {
+  DRAFT     @map("draft")
+  PUBLISHED @map("published")
+  ARCHIVED  @map("archived")
+}
+
+enum ResourceStatus {
+  ACTIVE
+  INACTIVE
+  ARCHIVED
+}
+
+enum StaticResourceType {
+  STATIC_PAGE          @map("static_page")
+  STATIC_COLLECTION    @map("static_collection")
+  STATIC_ARTICLE       @map("static_article")
+  STATIC_GLOSSARY      @map("static_glossary")
+  STATIC_CERTIFICATION @map("static_certification")
+
+  @@map("static_resource_type")
+}
+
+enum StaticResourceSourceType {
+  FRONTEND_STATIC    @map("frontend_static")
+  MDX                @map("mdx")
+  JSON               @map("json")
+  MANUAL_REGISTERED  @map("manual_registered")
+
+  @@map("static_resource_source_type")
+}
+
+enum GeoTargetType {
+  STATIC_RESOURCE @map("static_resource")
+  CASE            @map("case")
+  FAQ             @map("faq")
+  NEWS            @map("news")
+
+  @@map("geo_target_type")
+}
+
+enum CaseType {
+  BENCHMARK      @map("benchmark")
+  GEO_NATIVE     @map("geo_native")
+  AI_UPGRADE     @map("ai_upgrade")
+  KNOWLEDGE_BASE @map("knowledge_base")
+
+  @@map("case_type")
+}
+
+enum RelatedServiceType {
+  GEO_NATIVE_WEBSITE        @map("geo_native_website")
+  AI_FRIENDLY_UPGRADE       @map("ai_friendly_upgrade")
+  ENTERPRISE_KNOWLEDGE_BASE @map("enterprise_knowledge_base")
+  GENERAL                   @map("general")
+
+  @@map("related_service_type")
+}
+
+model User {
+  id           String     @id @default(uuid())
+  email        String     @unique
+  passwordHash String
+  name         String?
+  roles        UserRole[]
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+}
+
+model Role {
+  id          String           @id @default(uuid())
+  name        String           @unique
+  description String?
+  users       UserRole[]
+  permissions RolePermission[]
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+}
+
+model Permission {
+  id          String           @id @default(uuid())
+  action      String
+  resource    String
+  description String?
+  roles       RolePermission[]
+  createdAt   DateTime         @default(now())
+
+  @@unique([action, resource])
+}
+
+model UserRole {
+  userId String
+  roleId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  role   Role   @relation(fields: [roleId], references: [id], onDelete: Cascade)
+
+  @@id([userId, roleId])
+}
+
+model RolePermission {
+  roleId       String
+  permissionId String
+  role         Role       @relation(fields: [roleId], references: [id], onDelete: Cascade)
+  permission   Permission @relation(fields: [permissionId], references: [id], onDelete: Cascade)
+
+  @@id([roleId, permissionId])
+}
+
+model CaseStudy {
+  id                 String        @id @default(uuid())
+  title              String
+  slug               String        @unique
+  caseType           CaseType      @map("case_type")
+  industry           String?
+  clientName         String?       @map("client_name")
+  clientDisplayName  String?       @map("client_display_name")
+  isAnonymized       Boolean       @default(false) @map("is_anonymized")
+  challenge          String?
+  solution           String?
+  results            String?
+  metrics            Json?
+  excerpt            String?
+  content            String
+  coverImage         String?       @map("cover_image")
+  relatedServiceType String?       @map("related_service_type")
+  status             ContentStatus @default(DRAFT)
+  featured           Boolean       @default(false)
+  sortOrder          Int           @default(0) @map("sort_order")
+  publishedAt        DateTime?     @map("published_at")
+  createdAt          DateTime      @default(now()) @map("created_at")
+  updatedAt          DateTime      @updatedAt @map("updated_at")
+
+  @@map("cases")
+}
+
+model Faq {
+  id                 String        @id @default(uuid())
+  question           String
+  answer             String
+  category           String?
+  relatedServiceType RelatedServiceType @default(GENERAL) @map("related_service_type")
+  status             ContentStatus @default(DRAFT)
+  sortOrder          Int           @default(0) @map("sort_order")
+  createdAt          DateTime      @default(now()) @map("created_at")
+  updatedAt          DateTime      @updatedAt @map("updated_at")
+
+  @@map("faqs")
+}
+
+model NewsArticle {
+  id          String        @id @default(uuid())
+  title       String
+  slug        String        @unique
+  category    String?
+  source      String?
+  author      String?
+  excerpt     String?
+  content     String
+  coverImage  String?       @map("cover_image")
+  publishDate DateTime?     @map("publish_date")
+  status      ContentStatus @default(DRAFT)
+  sortOrder   Int           @default(0) @map("sort_order")
+  publishedAt DateTime?     @map("published_at")
+  createdAt   DateTime      @default(now()) @map("created_at")
+  updatedAt   DateTime      @updatedAt @map("updated_at")
+
+  @@map("news")
+}
+
+model StaticResource {
+  id              String                   @id @default(uuid())
+  title           String
+  slug            String                   @unique
+  resourceKey     String                   @unique @map("resource_key")
+  resourceType    StaticResourceType       @map("resource_type")
+  url             String                   @unique
+  sourceType      StaticResourceSourceType @map("source_type")
+  status          ResourceStatus           @default(ACTIVE)
+  sortOrder       Int                      @default(0) @map("sort_order")
+  createdAt       DateTime                 @default(now()) @map("created_at")
+  updatedAt       DateTime                 @updatedAt @map("updated_at")
+
+  @@map("static_resources")
+}
+
+model Setting {
+  id        String   @id @default(uuid())
+  key       String   @unique
+  value     String
+  group     String
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@index([group])
+  @@map("settings")
+}
+
+model GeoConfig {
+  id              String        @id @default(uuid())
+  targetType      GeoTargetType @map("target_type")
+  targetId        String        @map("target_id")
+  aiSummary       String?       @map("ai_summary")
+  schemaType      String?       @map("schema_type")
+  schemaJson      Json?         @map("schema_json")
+  metaTitle       String?       @map("meta_title")
+  metaDescription String?       @map("meta_description")
+  canonicalUrl    String?       @map("canonical_url")
+  llmsEnabled     Boolean       @default(true) @map("llms_enabled")
+  sitemapEnabled  Boolean       @default(true) @map("sitemap_enabled")
+  sitemapPriority Float         @default(0.5) @map("sitemap_priority")
+  detectEnabled   Boolean       @default(true) @map("detect_enabled")
+  lastDetectedAt  DateTime?     @map("last_detected_at")
+  geoChecks       GeoCheck[]
+  createdAt       DateTime      @default(now()) @map("created_at")
+  updatedAt       DateTime      @updatedAt @map("updated_at")
+
+  @@unique([targetType, targetId])
+  @@index([targetType])
+  @@map("geo_configs")
+}
+
+model GeoScore {
+  id                 String        @id @default(uuid())
+  targetType         GeoTargetType @map("target_type")
+  targetId           String        @map("target_id")
+  crawlScore         Int           @map("crawl_score")
+  understandingScore Int           @map("understanding_score")
+  structureScore     Int           @map("structure_score")
+  totalScore         Int           @map("total_score")
+  createdAt          DateTime      @default(now()) @map("created_at")
+  updatedAt          DateTime      @updatedAt @map("updated_at")
+
+  @@unique([targetType, targetId])
+  @@index([targetType])
+  @@map("geo_scores")
+}
+
+model GeoIssue {
+  id          String        @id @default(uuid())
+  targetType  GeoTargetType @map("target_type")
+  targetId    String        @map("target_id")
+  issueType   String        @map("issue_type")
+  severity    String
+  description String
+  suggestion  String
+  status      String        @default("open")
+  createdAt   DateTime      @default(now()) @map("created_at")
+  updatedAt   DateTime      @updatedAt @map("updated_at")
+
+  @@index([targetType])
+  @@index([status])
+  @@map("geo_issues")
+}
+
+model GeoCheck {
+  id          String    @id @default(uuid())
+  geoConfigId String    @map("geo_config_id")
+  geoConfig   GeoConfig @relation(fields: [geoConfigId], references: [id], onDelete: Cascade)
+  score       Int
+  findings    Json
+  checkedAt   DateTime  @default(now()) @map("checked_at")
+
+  @@map("geo_checks")
+}
+
+enum LeadStatus {
+  NEW       @map("new")
+  FOLLOWING @map("following")
+  DONE      @map("done")
+  INVALID   @map("invalid")
+
+  @@map("lead_status")
+}
+
+model Lead {
+  id               String     @id @default(uuid())
+  name             String
+  companyName      String?    @map("company_name")
+  contact          String
+  demandType       String     @map("demand_type")
+  message          String?
+  sourcePage       String     @map("source_page")
+  sourcePageTitle  String?    @map("source_page_title")
+  sourceModule     String     @map("source_module")
+  sourceButtonText String?    @map("source_button_text")
+  referrer         String?
+  userAgent        String?    @map("user_agent")
+  ip               String?
+  status           LeadStatus @default(NEW)
+  note             String?
+  createdAt        DateTime   @default(now()) @map("created_at")
+  updatedAt        DateTime   @updatedAt @map("updated_at")
+
+  @@index([status])
+  @@index([demandType])
+  @@index([sourcePage])
+  @@index([createdAt])
+  @@map("leads")
+}

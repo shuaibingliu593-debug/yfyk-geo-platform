@@ -1,0 +1,106 @@
+{
+  "generatedAt": "2026-06-08T05:36:36.983Z",
+  "totalCount": 13,
+  "counts": {
+    "site": 8,
+    "cases": 2,
+    "faqs": 2,
+    "news": 1
+  },
+  "items": [
+    {
+      "id": "4ce90f0e-175e-4b6e-812e-1514b6839855",
+      "targetType": "STATIC_RESOURCE",
+      "title": "首页",
+      "url": "/",
+      "section": "site"
+    },
+    {
+      "id": "91cacfac-f35b-4dbf-b533-80becc41e153",
+      "targetType": "STATIC_RESOURCE",
+      "title": "GEO原生建站",
+      "url": "/geo-native-website",
+      "section": "site"
+    },
+    {
+      "id": "ad0d48f6-2d8c-4737-8b18-c76465d0565d",
+      "targetType": "STATIC_RESOURCE",
+      "title": "老网站AI友好度升级",
+      "url": "/ai-friendly-upgrade",
+      "section": "site"
+    },
+    {
+      "id": "11c0ce4d-2f94-4e32-b303-2e98b769365b",
+      "targetType": "STATIC_RESOURCE",
+      "title": "企业知识库",
+      "url": "/enterprise-knowledge-base",
+      "section": "site"
+    },
+    {
+      "id": "420770b4-960b-4d04-bb71-49eea670e3b9",
+      "targetType": "STATIC_RESOURCE",
+      "title": "专利&高新技术企业",
+      "url": "/about/patents",
+      "section": "site"
+    },
+    {
+      "id": "193168fd-e3a1-4753-bbc3-8a1df3f41e2d",
+      "targetType": "STATIC_RESOURCE",
+      "title": "联系我们",
+      "url": "/about/contact",
+      "section": "site"
+    },
+    {
+      "id": "5b5f8b9e-186a-460c-a811-a599140d08de",
+      "targetType": "STATIC_RESOURCE",
+      "title": "知识库",
+      "url": "/knowledge",
+      "section": "site"
+    },
+    {
+      "id": "367fd287-c55c-4e21-bcd6-aeea4aa431ee",
+      "targetType": "STATIC_RESOURCE",
+      "title": "术语表",
+      "url": "/glossary",
+      "section": "site"
+    },
+    {
+      "id": "0dc59e04-ed03-4e81-b390-563d80b348cc",
+      "targetType": "CASE",
+      "title": "metrics修复验证案例",
+      "url": "/cases/metrics-fix-test-1780892724",
+      "section": "cases"
+    },
+    {
+      "id": "8b366035-8206-410c-bd75-2bc7f2b60145",
+      "targetType": "CASE",
+      "title": "制造业官网 GEO 原生重构",
+      "url": "/cases/manufacturing-geo-native-rebuild",
+      "section": "cases"
+    },
+    {
+      "id": "cea2d2d6-87a4-415a-9949-90b1371f895e",
+      "targetType": "FAQ",
+      "title": "测试",
+      "url": null,
+      "section": "faqs"
+    },
+    {
+      "id": "seed-faq-geo-seo-difference",
+      "targetType": "FAQ",
+      "title": "1GEO原生建站和传统SEO有什么区别？",
+      "url": null,
+      "section": "faqs"
+    },
+    {
+      "id": "e83b1dc0-18e1-4dc4-b3f9-121487e37176",
+      "targetType": "NEWS",
+      "title": "AI搜索时代的官网内容结构升级",
+      "url": "/news/ai-search-website-content-structure",
+      "section": "news"
+    }
+  ],
+  "llmsText": "YFYK\n\nSite\n首页: https://www.yfyk.com/\nGEO原生建站: https://www.yfyk.com/geo-native-website\n老网站AI友好度升级: https://www.yfyk.com/ai-friendly-upgrade\n企业知识库: https://www.yfyk.com/enterprise-knowledge-base\n专利&高新技术企业: https://www.yfyk.com/about/patents\n联系我们: https://www.yfyk.com/about/contact\n知识库: https://www.yfyk.com/knowledge\n术语表: https://www.yfyk.com/glossary\n\nCases\nmetrics修复验证案例: https://www.yfyk.com/cases/metrics-fix-test-1780892724\n制造业官网 GEO 原生重构: https://www.yfyk.com/cases/manufacturing-geo-native-rebuild\n\nFAQs\n测试\n1GEO原生建站和传统SEO有什么区别？\n\nNews\nAI搜索时代的官网内容结构升级: https://www.yfyk.com/news/ai-search-website-content-structure\n",
+  "llmsFullText": "# YFYK\n\nGenerated: 2026-06-08T05:36:36.983Z\n\n## Site\n- 首页: https://www.yfyk.com/\n  AI Summary: 测试 AI Summary，长度超过五十字，用于验证 GEO 配置保存接口是否正常写入并参与后续评分。\n  Description: 测试 Meta Description\n- GEO原生建站: https://www.yfyk.com/geo-native-website\n  AI Summary: GEO原生建站 是 YFYK 官网的静态页面，用于向 AI 搜索、企业客户和访问者说明相关服务、公司信息与 GEO 原生建站能力。\n  Description: GEO原生建站 页面提供 YFYK GEO 官网建设、AI 友好度升级和企业知识库相关信息。\n- 老网站AI友好度升级: https://www.yfyk.com/ai-friendly-upgrade\n  AI Summary: 老网站AI友好度升级 是 YFYK 官网的静态页面，用于向 AI 搜索、企业客户和访问者说明相关服务、公司信息与 GEO 原生建站能力。\n  Description: 老网站AI友好度升级 页面提供 YFYK GEO 官网建设、AI 友好度升级和企业知识库相关信息。\n- 企业知识库: https://www.yfyk.com/enterprise-knowledge-base\n  AI Summary: 企业知识库 是 YFYK 官网的静态页面，用于向 AI 搜索、企业客户和访问者说明相关服务、公司信息与 GEO 原生建站能力。\n  Description: 企业知识库 页面提供 YFYK GEO 官网建设、AI 友好度升级和企业知识库相关信息。\n- 专利&高新技术企业: https://www.yfyk.com/about/patents\n  AI Summary: 专利&高新技术企业 是 YFYK 官网的静态页面，用于向 AI 搜索、企业客户和访问者说明相关服务、公司信息与 GEO 原生建站能力。\n  Description: 专利&高新技术企业 页面提供 YFYK GEO 官网建设、AI 友好度升级和企业知识库相关信息。\n- 联系我们: https://www.yfyk.com/about/contact\n  AI Summary: 联系我们 是 YFYK 官网的静态页面，用于向 AI 搜索、企业客户和访问者说明相关服务、公司信息与 GEO 原生建站能力。\n  Description: 联系我们 页面提供 YFYK GEO 官网建设、AI 友好度升级和企业知识库相关信息。\n- 知识库: https://www.yfyk.com/knowledge\n  AI Summary: 知识库 是 YFYK 官网的静态页面，用于向 AI 搜索、企业客户和访问者说明相关服务、公司信息与 GEO 原生建站能力。\n  Description: 知识库 页面提供 YFYK GEO 官网建设、AI 友好度升级和企业知识库相关信息。\n- 术语表: https://www.yfyk.com/glossary\n  AI Summary: 术语表 是 YFYK 官网的静态页面，用于向 AI 搜索、企业客户和访问者说明相关服务、公司信息与 GEO 原生建站能力。\n  Description: 术语表 页面提供 YFYK GEO 官网建设、AI 友好度升级和企业知识库相关信息。\n\n## Cases\n- metrics修复验证案例: https://www.yfyk.com/cases/metrics-fix-test-1780892724\n  AI Summary: 测试摘要\n  Description: 测试摘要\n  Detail: 测试挑战 测试挑战 测试挑战\n- 制造业官网 GEO 原生重构: https://www.yfyk.com/cases/manufacturing-geo-native-rebuild\n  AI Summary: 测试-该案例展示制造业官网如何通过 GEO 原生结构升级，让 AI 搜索更容易理解服务能力、行业经验和业务价值。\n  Description: 测试-该案例展示制造业官网如何通过 GEO 原生结构升级，让 AI 搜索更容易理解服务能力、行业经验和业务价值。\n  Detail: 原官网页面结构偏营销展示，AI 搜索难以识别服务边界、行业能力和案例成果。 重构服务页信息架构，补充页面级 Schema、AI Summary、llms.txt 和 AI Sitemap 收录配置。 核心服务页被 AI 问答引用的稳定性提升，销售线索页面跳转更集中。\n\n## FAQs\n- 测试\n  AI Summary: 测试答案1\n  Description: 测试答案1\n  Detail: 测试答案1\n- 1GEO原生建站和传统SEO有什么区别？\n  AI Summary: 传统SEO更关注搜索引擎排名和关键词覆盖，GEO原生建站更关注AI系统是否能抓取、理解、引用和复述官网内容，两者可以协同但优化对象不同。\n  Description: 传统SEO更关注搜索引擎排名和关键词覆盖，GEO原生建站更关注AI系统是否能抓取、理解、引用和复述官网内容，两者可以协同但优化对象不同。\n  Detail: 传统SEO更关注搜索引擎排名和关键词覆盖，GEO原生建站更关注AI系统是否能抓取、理解、引用和复述官网内容，两者可以协同但优化对象不同。\n\n## News\n- AI搜索时代的官网内容结构升级: https://www.yfyk.com/news/ai-search-website-content-structure\n  AI Summary: 这篇资讯介绍 AI 搜索时代官网内容结构升级的方法，包括信息架构、结构化数据、AI Summary、llms.txt 和 AI Sitemap 等关键能力。\n  Description: 了解 AI 搜索如何改变官网内容结构，以及企业如何通过 GEO 配置提升 AI 可理解性。\n  Detail: 在 AI 搜索时代，官网不仅要面向用户阅读，也要面向 AI 抓取和理解。企业可以通过清晰的信息架构、结构化数据、AI Summary、llms.txt 与 AI Sitemap 建立更稳定的内容入口。\n",
+  "published": true
+}

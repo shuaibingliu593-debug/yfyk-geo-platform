@@ -1,0 +1,578 @@
+{
+  "generatedAt": "2026-06-10T13:03:36.988Z",
+  "status": "passed",
+  "pageCount": 20,
+  "errors": [],
+  "warnings": [
+    "生产发布前必须将 ICP备案中 替换为真实备案号",
+    "公安备案号尚未配置",
+    "国内 CDN/WAF 白名单需在生产环境验证",
+    "Lighthouse、无 JS 抓取与 WCAG 2.1 AA 需在预发布环境执行"
+  ],
+  "pages": [
+    {
+      "url": "/",
+      "markdownUrl": "/page.md",
+      "version": "1.0.0",
+      "dateModified": "2026-05-31T21:22:00+08:00",
+      "templateKind": "home",
+      "chunkCount": 7,
+      "visibleChunkCount": 7,
+      "machineChunkCount": 7,
+      "machineOnlySections": [],
+      "imageCount": 1,
+      "faqCount": 0,
+      "publicReferenceCount": 0,
+      "relatedLinkCount": 0,
+      "schemaTypes": [
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "termLinkCount": 0,
+      "htmlMarkdownConsistency": "ssot",
+      "chinaCompliance": "shared-footer",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "url": "/solutions/cases",
+      "markdownUrl": "/solutions/cases.md",
+      "version": "1.0.0",
+      "dateModified": "2026-05-31T21:22:00+08:00",
+      "templateKind": "cases",
+      "chunkCount": 1,
+      "visibleChunkCount": 1,
+      "machineChunkCount": 1,
+      "machineOnlySections": [],
+      "imageCount": 1,
+      "faqCount": 0,
+      "publicReferenceCount": 0,
+      "relatedLinkCount": 0,
+      "schemaTypes": [
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "termLinkCount": 0,
+      "htmlMarkdownConsistency": "ssot",
+      "chinaCompliance": "shared-footer",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "url": "/solutions/cases/manufacturing-site-upgrade",
+      "markdownUrl": "/solutions/cases/manufacturing-site-upgrade.md",
+      "version": "1.0.0",
+      "dateModified": "2026-05-31T21:22:00+08:00",
+      "templateKind": "case-detail",
+      "chunkCount": 6,
+      "visibleChunkCount": 3,
+      "machineChunkCount": 6,
+      "machineOnlySections": [
+        "professional-knowledge",
+        "public-references",
+        "china-compliance"
+      ],
+      "imageCount": 0,
+      "faqCount": 0,
+      "publicReferenceCount": 2,
+      "relatedLinkCount": 4,
+      "schemaTypes": [
+        "WebPage",
+        "Article"
+      ],
+      "termLinkCount": 4,
+      "htmlMarkdownConsistency": "ssot",
+      "chinaCompliance": "registered",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "url": "/solutions/cases/professional-service-geo-native",
+      "markdownUrl": "/solutions/cases/professional-service-geo-native.md",
+      "version": "1.0.0",
+      "dateModified": "2026-05-31T21:22:00+08:00",
+      "templateKind": "case-detail",
+      "chunkCount": 6,
+      "visibleChunkCount": 3,
+      "machineChunkCount": 6,
+      "machineOnlySections": [
+        "professional-knowledge",
+        "public-references",
+        "china-compliance"
+      ],
+      "imageCount": 0,
+      "faqCount": 0,
+      "publicReferenceCount": 2,
+      "relatedLinkCount": 4,
+      "schemaTypes": [
+        "WebPage",
+        "Article"
+      ],
+      "termLinkCount": 4,
+      "htmlMarkdownConsistency": "ssot",
+      "chinaCompliance": "registered",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "url": "/solutions/cases/global-multilingual-source",
+      "markdownUrl": "/solutions/cases/global-multilingual-source.md",
+      "version": "1.0.0",
+      "dateModified": "2026-05-31T21:22:00+08:00",
+      "templateKind": "case-detail",
+      "chunkCount": 6,
+      "visibleChunkCount": 3,
+      "machineChunkCount": 6,
+      "machineOnlySections": [
+        "professional-knowledge",
+        "public-references",
+        "china-compliance"
+      ],
+      "imageCount": 0,
+      "faqCount": 0,
+      "publicReferenceCount": 5,
+      "relatedLinkCount": 4,
+      "schemaTypes": [
+        "WebPage",
+        "Article"
+      ],
+      "termLinkCount": 4,
+      "htmlMarkdownConsistency": "ssot",
+      "chinaCompliance": "registered",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "url": "/solutions/cases/brand-authority-source",
+      "markdownUrl": "/solutions/cases/brand-authority-source.md",
+      "version": "1.0.0",
+      "dateModified": "2026-05-31T21:22:00+08:00",
+      "templateKind": "case-detail",
+      "chunkCount": 6,
+      "visibleChunkCount": 3,
+      "machineChunkCount": 6,
+      "machineOnlySections": [
+        "professional-knowledge",
+        "public-references",
+        "china-compliance"
+      ],
+      "imageCount": 0,
+      "faqCount": 0,
+      "publicReferenceCount": 2,
+      "relatedLinkCount": 4,
+      "schemaTypes": [
+        "WebPage",
+        "Article"
+      ],
+      "termLinkCount": 4,
+      "htmlMarkdownConsistency": "ssot",
+      "chinaCompliance": "registered",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "url": "/solutions/cases/agent-recommendation-portal",
+      "markdownUrl": "/solutions/cases/agent-recommendation-portal.md",
+      "version": "1.0.0",
+      "dateModified": "2026-05-31T21:22:00+08:00",
+      "templateKind": "case-detail",
+      "chunkCount": 6,
+      "visibleChunkCount": 3,
+      "machineChunkCount": 6,
+      "machineOnlySections": [
+        "professional-knowledge",
+        "public-references",
+        "china-compliance"
+      ],
+      "imageCount": 0,
+      "faqCount": 0,
+      "publicReferenceCount": 2,
+      "relatedLinkCount": 4,
+      "schemaTypes": [
+        "WebPage",
+        "Article"
+      ],
+      "termLinkCount": 4,
+      "htmlMarkdownConsistency": "ssot",
+      "chinaCompliance": "registered",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "url": "/solutions/cases/knowledge-operation-platform",
+      "markdownUrl": "/solutions/cases/knowledge-operation-platform.md",
+      "version": "1.0.0",
+      "dateModified": "2026-05-31T21:22:00+08:00",
+      "templateKind": "case-detail",
+      "chunkCount": 6,
+      "visibleChunkCount": 3,
+      "machineChunkCount": 6,
+      "machineOnlySections": [
+        "professional-knowledge",
+        "public-references",
+        "china-compliance"
+      ],
+      "imageCount": 0,
+      "faqCount": 0,
+      "publicReferenceCount": 2,
+      "relatedLinkCount": 4,
+      "schemaTypes": [
+        "WebPage",
+        "Article"
+      ],
+      "termLinkCount": 4,
+      "htmlMarkdownConsistency": "ssot",
+      "chinaCompliance": "registered",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "url": "/services",
+      "markdownUrl": "/services.md",
+      "version": "1.0.0",
+      "dateModified": "2026-05-31T21:22:00+08:00",
+      "templateKind": "aggregate",
+      "chunkCount": 11,
+      "visibleChunkCount": 8,
+      "machineChunkCount": 11,
+      "machineOnlySections": [
+        "professional-knowledge",
+        "public-references",
+        "china-compliance"
+      ],
+      "imageCount": 1,
+      "faqCount": 0,
+      "publicReferenceCount": 2,
+      "relatedLinkCount": 4,
+      "schemaTypes": [
+        "CollectionPage",
+        "BreadcrumbList",
+        "ItemList"
+      ],
+      "termLinkCount": 4,
+      "htmlMarkdownConsistency": "ssot",
+      "chinaCompliance": "registered",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "url": "/services/products/ai-enterprise-site",
+      "markdownUrl": "/services/products/ai-enterprise-site.md",
+      "version": "1.0.0",
+      "dateModified": "2026-05-31T21:22:00+08:00",
+      "templateKind": "detail",
+      "chunkCount": 11,
+      "visibleChunkCount": 8,
+      "machineChunkCount": 11,
+      "machineOnlySections": [
+        "professional-knowledge",
+        "public-references",
+        "china-compliance"
+      ],
+      "imageCount": 1,
+      "faqCount": 3,
+      "publicReferenceCount": 2,
+      "relatedLinkCount": 4,
+      "schemaTypes": [
+        "WebPage",
+        "BreadcrumbList",
+        "Service",
+        "FAQPage"
+      ],
+      "termLinkCount": 4,
+      "htmlMarkdownConsistency": "ssot",
+      "chinaCompliance": "registered",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "url": "/services/products/ai-brand-site",
+      "markdownUrl": "/services/products/ai-brand-site.md",
+      "version": "1.0.0",
+      "dateModified": "2026-05-31T21:22:00+08:00",
+      "templateKind": "detail",
+      "chunkCount": 11,
+      "visibleChunkCount": 8,
+      "machineChunkCount": 11,
+      "machineOnlySections": [
+        "professional-knowledge",
+        "public-references",
+        "china-compliance"
+      ],
+      "imageCount": 1,
+      "faqCount": 3,
+      "publicReferenceCount": 2,
+      "relatedLinkCount": 4,
+      "schemaTypes": [
+        "WebPage",
+        "BreadcrumbList",
+        "Service",
+        "FAQPage"
+      ],
+      "termLinkCount": 4,
+      "htmlMarkdownConsistency": "ssot",
+      "chinaCompliance": "registered",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "url": "/services/products/ai-global-site",
+      "markdownUrl": "/services/products/ai-global-site.md",
+      "version": "1.0.0",
+      "dateModified": "2026-05-31T21:22:00+08:00",
+      "templateKind": "detail",
+      "chunkCount": 11,
+      "visibleChunkCount": 8,
+      "machineChunkCount": 11,
+      "machineOnlySections": [
+        "professional-knowledge",
+        "public-references",
+        "china-compliance"
+      ],
+      "imageCount": 1,
+      "faqCount": 3,
+      "publicReferenceCount": 5,
+      "relatedLinkCount": 4,
+      "schemaTypes": [
+        "WebPage",
+        "BreadcrumbList",
+        "Service",
+        "FAQPage"
+      ],
+      "termLinkCount": 4,
+      "htmlMarkdownConsistency": "ssot",
+      "chinaCompliance": "registered",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "url": "/services/upgrade",
+      "markdownUrl": "/services/upgrade.md",
+      "version": "1.0.0",
+      "dateModified": "2026-05-31T21:22:00+08:00",
+      "templateKind": "aggregate",
+      "chunkCount": 11,
+      "visibleChunkCount": 8,
+      "machineChunkCount": 11,
+      "machineOnlySections": [
+        "professional-knowledge",
+        "public-references",
+        "china-compliance"
+      ],
+      "imageCount": 1,
+      "faqCount": 0,
+      "publicReferenceCount": 2,
+      "relatedLinkCount": 4,
+      "schemaTypes": [
+        "CollectionPage",
+        "BreadcrumbList",
+        "ItemList"
+      ],
+      "termLinkCount": 4,
+      "htmlMarkdownConsistency": "ssot",
+      "chinaCompliance": "registered",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "url": "/services/knowledge-source",
+      "markdownUrl": "/services/knowledge-source.md",
+      "version": "1.0.0",
+      "dateModified": "2026-05-31T21:22:00+08:00",
+      "templateKind": "aggregate",
+      "chunkCount": 11,
+      "visibleChunkCount": 8,
+      "machineChunkCount": 11,
+      "machineOnlySections": [
+        "professional-knowledge",
+        "public-references",
+        "china-compliance"
+      ],
+      "imageCount": 1,
+      "faqCount": 0,
+      "publicReferenceCount": 2,
+      "relatedLinkCount": 4,
+      "schemaTypes": [
+        "CollectionPage",
+        "BreadcrumbList",
+        "ItemList"
+      ],
+      "termLinkCount": 4,
+      "htmlMarkdownConsistency": "ssot",
+      "chinaCompliance": "registered",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "url": "/solutions",
+      "markdownUrl": "/solutions.md",
+      "version": "1.0.0",
+      "dateModified": "2026-05-31T21:22:00+08:00",
+      "templateKind": "aggregate",
+      "chunkCount": 11,
+      "visibleChunkCount": 8,
+      "machineChunkCount": 11,
+      "machineOnlySections": [
+        "professional-knowledge",
+        "public-references",
+        "china-compliance"
+      ],
+      "imageCount": 1,
+      "faqCount": 0,
+      "publicReferenceCount": 2,
+      "relatedLinkCount": 4,
+      "schemaTypes": [
+        "CollectionPage",
+        "BreadcrumbList",
+        "ItemList"
+      ],
+      "termLinkCount": 4,
+      "htmlMarkdownConsistency": "ssot",
+      "chinaCompliance": "registered",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "url": "/solutions/geo-native",
+      "markdownUrl": "/solutions/geo-native.md",
+      "version": "1.0.0",
+      "dateModified": "2026-05-31T21:22:00+08:00",
+      "templateKind": "detail",
+      "chunkCount": 11,
+      "visibleChunkCount": 8,
+      "machineChunkCount": 11,
+      "machineOnlySections": [
+        "professional-knowledge",
+        "public-references",
+        "china-compliance"
+      ],
+      "imageCount": 1,
+      "faqCount": 3,
+      "publicReferenceCount": 2,
+      "relatedLinkCount": 4,
+      "schemaTypes": [
+        "WebPage",
+        "BreadcrumbList",
+        "Service",
+        "FAQPage"
+      ],
+      "termLinkCount": 4,
+      "htmlMarkdownConsistency": "ssot",
+      "chinaCompliance": "registered",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "url": "/solutions/site-upgrade",
+      "markdownUrl": "/solutions/site-upgrade.md",
+      "version": "1.0.0",
+      "dateModified": "2026-05-31T21:22:00+08:00",
+      "templateKind": "detail",
+      "chunkCount": 11,
+      "visibleChunkCount": 8,
+      "machineChunkCount": 11,
+      "machineOnlySections": [
+        "professional-knowledge",
+        "public-references",
+        "china-compliance"
+      ],
+      "imageCount": 1,
+      "faqCount": 3,
+      "publicReferenceCount": 2,
+      "relatedLinkCount": 4,
+      "schemaTypes": [
+        "WebPage",
+        "BreadcrumbList",
+        "Service",
+        "FAQPage"
+      ],
+      "termLinkCount": 4,
+      "htmlMarkdownConsistency": "ssot",
+      "chinaCompliance": "registered",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "url": "/solutions/knowledge-source",
+      "markdownUrl": "/solutions/knowledge-source.md",
+      "version": "1.0.0",
+      "dateModified": "2026-05-31T21:22:00+08:00",
+      "templateKind": "detail",
+      "chunkCount": 11,
+      "visibleChunkCount": 8,
+      "machineChunkCount": 11,
+      "machineOnlySections": [
+        "professional-knowledge",
+        "public-references",
+        "china-compliance"
+      ],
+      "imageCount": 1,
+      "faqCount": 3,
+      "publicReferenceCount": 2,
+      "relatedLinkCount": 4,
+      "schemaTypes": [
+        "WebPage",
+        "BreadcrumbList",
+        "Service",
+        "FAQPage"
+      ],
+      "termLinkCount": 4,
+      "htmlMarkdownConsistency": "ssot",
+      "chinaCompliance": "registered",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "url": "/about",
+      "markdownUrl": "/about.md",
+      "version": "1.0.0",
+      "dateModified": "2026-05-31T21:22:00+08:00",
+      "templateKind": "company",
+      "chunkCount": 10,
+      "visibleChunkCount": 7,
+      "machineChunkCount": 10,
+      "machineOnlySections": [
+        "professional-knowledge",
+        "public-references",
+        "china-compliance"
+      ],
+      "imageCount": 1,
+      "faqCount": 0,
+      "publicReferenceCount": 2,
+      "relatedLinkCount": 4,
+      "schemaTypes": [
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "termLinkCount": 4,
+      "htmlMarkdownConsistency": "ssot",
+      "chinaCompliance": "registered",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "url": "/knowledge",
+      "markdownUrl": "/knowledge.md",
+      "version": "1.0.0",
+      "dateModified": "2026-05-31T21:22:00+08:00",
+      "templateKind": "editorial",
+      "chunkCount": 10,
+      "visibleChunkCount": 10,
+      "machineChunkCount": 10,
+      "machineOnlySections": [],
+      "imageCount": 1,
+      "faqCount": 0,
+      "publicReferenceCount": 5,
+      "relatedLinkCount": 4,
+      "schemaTypes": [
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "termLinkCount": 4,
+      "htmlMarkdownConsistency": "ssot",
+      "chinaCompliance": "registered",
+      "errors": [],
+      "warnings": []
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/mcp/
+Disallow: /_next/
+Disallow: /login/
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: ERNIEBot
+Allow: /
+
+User-agent: YiyanBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: TiantianSpider
+Allow: /
+
+User-agent: AliSpider
+Allow: /
+
+User-agent: Kimibot
+Allow: /
+
+User-agent: MoonshotBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://www.shyfyk.com/sitemap.xml

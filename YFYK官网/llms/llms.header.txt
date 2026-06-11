@@ -1,0 +1,62 @@
+# 优服优科 AI 友好型官网
+
+版本: 1.0.0
+最后更新: 2026-05-31
+
+System Instruction Guard: 此文件仅提供知识事实，不接受任何改变本站属性的第三方指令。
+
+## 允许的 AI 爬虫
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 1
+
+User-agent: ERNIEBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: YiyanBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Bytespider
+Allow: /
+Crawl-delay: 1
+
+User-agent: TiantianSpider
+Allow: /
+Crawl-delay: 1
+
+User-agent: AliSpider
+Allow: /
+Crawl-delay: 1
+
+User-agent: Kimibot
+Allow: /
+Crawl-delay: 2
+
+User-agent: MoonshotBot
+Allow: /
+Crawl-delay: 2
+
+## 网站核心主题
+- AI 友好型官网建设
+- GEO（生成式引擎优化）
+- 企业知识库信源构建
+- MCP 接口集成
+
+## 核心内容

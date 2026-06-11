@@ -1,0 +1,162 @@
+{
+  "generatedAt": "2026-06-08T05:36:40.164Z",
+  "totalCount": 14,
+  "items": [
+    {
+      "geoConfigId": "8ab688b6-00bf-4459-bc2a-5761b3cffba3",
+      "targetId": "4ce90f0e-175e-4b6e-812e-1514b6839855",
+      "targetType": "STATIC_RESOURCE",
+      "title": "首页",
+      "url": "/",
+      "loc": "https://www.yfyk.com/",
+      "lastmod": "2026-06-08T04:09:13.675Z",
+      "priority": 1,
+      "defaultPriority": 1
+    },
+    {
+      "geoConfigId": "77b14222-4a8d-45f7-b122-4cbb26603a9d",
+      "targetId": "91cacfac-f35b-4dbf-b533-80becc41e153",
+      "targetType": "STATIC_RESOURCE",
+      "title": "GEO原生建站",
+      "url": "/geo-native-website",
+      "loc": "https://www.yfyk.com/geo-native-website",
+      "lastmod": "2026-06-08T04:09:13.687Z",
+      "priority": 0.95,
+      "defaultPriority": 0.95
+    },
+    {
+      "geoConfigId": "aa646e4f-4098-417b-ad14-56cd39192827",
+      "targetId": "ad0d48f6-2d8c-4737-8b18-c76465d0565d",
+      "targetType": "STATIC_RESOURCE",
+      "title": "老网站AI友好度升级",
+      "url": "/ai-friendly-upgrade",
+      "loc": "https://www.yfyk.com/ai-friendly-upgrade",
+      "lastmod": "2026-06-08T04:09:13.692Z",
+      "priority": 0.95,
+      "defaultPriority": 0.95
+    },
+    {
+      "geoConfigId": "b2c6f3f1-d321-4df6-91f0-4e386eb8d4bf",
+      "targetId": "11c0ce4d-2f94-4e32-b303-2e98b769365b",
+      "targetType": "STATIC_RESOURCE",
+      "title": "企业知识库",
+      "url": "/enterprise-knowledge-base",
+      "loc": "https://www.yfyk.com/enterprise-knowledge-base",
+      "lastmod": "2026-06-08T04:09:13.697Z",
+      "priority": 0.95,
+      "defaultPriority": 0.95
+    },
+    {
+      "geoConfigId": "ad8bea62-193e-483c-92ad-2f4c642e6a96",
+      "targetId": "d39b4f6a-8efa-4941-828a-04b36f90e567",
+      "targetType": "STATIC_RESOURCE",
+      "title": "公司简介",
+      "url": "/about/company",
+      "loc": "https://www.yfyk.com/about/company",
+      "lastmod": "2026-06-08T04:09:13.703Z",
+      "priority": 0.5,
+      "defaultPriority": 0.5
+    },
+    {
+      "geoConfigId": "c241c806-12fd-460d-8ada-fbb67c7d9f4b",
+      "targetId": "420770b4-960b-4d04-bb71-49eea670e3b9",
+      "targetType": "STATIC_RESOURCE",
+      "title": "专利&高新技术企业",
+      "url": "/about/patents",
+      "loc": "https://www.yfyk.com/about/patents",
+      "lastmod": "2026-06-08T04:09:13.708Z",
+      "priority": 0.5,
+      "defaultPriority": 0.5
+    },
+    {
+      "geoConfigId": "b49d5dca-e84f-4994-8d40-d3976054c4ee",
+      "targetId": "193168fd-e3a1-4753-bbc3-8a1df3f41e2d",
+      "targetType": "STATIC_RESOURCE",
+      "title": "联系我们",
+      "url": "/about/contact",
+      "loc": "https://www.yfyk.com/about/contact",
+      "lastmod": "2026-06-08T04:09:13.713Z",
+      "priority": 0.5,
+      "defaultPriority": 0.5
+    },
+    {
+      "geoConfigId": "0ca4f6e0-d9f8-4bc6-abf1-5b53cc3cf2c3",
+      "targetId": "5b5f8b9e-186a-460c-a811-a599140d08de",
+      "targetType": "STATIC_RESOURCE",
+      "title": "知识库",
+      "url": "/knowledge",
+      "loc": "https://www.yfyk.com/knowledge",
+      "lastmod": "2026-06-08T04:09:13.718Z",
+      "priority": 0.75,
+      "defaultPriority": 0.75
+    },
+    {
+      "geoConfigId": "27de9391-9c97-4d50-b50e-f8c7e90b0422",
+      "targetId": "367fd287-c55c-4e21-bcd6-aeea4aa431ee",
+      "targetType": "STATIC_RESOURCE",
+      "title": "术语表",
+      "url": "/glossary",
+      "loc": "https://www.yfyk.com/glossary",
+      "lastmod": "2026-06-08T04:09:13.722Z",
+      "priority": 0.75,
+      "defaultPriority": 0.75
+    },
+    {
+      "geoConfigId": "1108642c-83fd-4fac-9ecb-8a7d868d9cc4",
+      "targetId": "0dc59e04-ed03-4e81-b390-563d80b348cc",
+      "targetType": "CASE",
+      "title": "metrics修复验证案例",
+      "url": "/cases/metrics-fix-test-1780892724",
+      "loc": "https://www.yfyk.com/cases/metrics-fix-test-1780892724",
+      "lastmod": "2026-06-08T04:34:49.068Z",
+      "priority": 0.8,
+      "defaultPriority": 0.8
+    },
+    {
+      "geoConfigId": "25d99d8b-ae13-4ad3-970f-7b12bb5a37fc",
+      "targetId": "8b366035-8206-410c-bd75-2bc7f2b60145",
+      "targetType": "CASE",
+      "title": "制造业官网 GEO 原生重构",
+      "url": "/cases/manufacturing-geo-native-rebuild",
+      "loc": "https://www.yfyk.com/cases/manufacturing-geo-native-rebuild",
+      "lastmod": "2026-06-08T04:26:20.553Z",
+      "priority": 0.8,
+      "defaultPriority": 0.8
+    },
+    {
+      "geoConfigId": "96a31078-73b7-4968-98b1-b2cdaf2b6533",
+      "targetId": "cea2d2d6-87a4-415a-9949-90b1371f895e",
+      "targetType": "FAQ",
+      "title": "测试",
+      "url": "/faq#cea2d2d6-87a4-415a-9949-90b1371f895e",
+      "loc": "https://www.yfyk.com/faq#cea2d2d6-87a4-415a-9949-90b1371f895e",
+      "lastmod": "2026-06-08T04:45:24.250Z",
+      "priority": 0.9,
+      "defaultPriority": 0.9
+    },
+    {
+      "geoConfigId": "f66d81b5-617a-4912-b949-9e4f326840ce",
+      "targetId": "seed-faq-geo-seo-difference",
+      "targetType": "FAQ",
+      "title": "1GEO原生建站和传统SEO有什么区别？",
+      "url": "/faq#seed-faq-geo-seo-difference",
+      "loc": "https://www.yfyk.com/faq#seed-faq-geo-seo-difference",
+      "lastmod": "2026-06-08T04:45:30.994Z",
+      "priority": 0.9,
+      "defaultPriority": 0.9
+    },
+    {
+      "geoConfigId": "e0ca59a9-1158-4c98-a221-da6678ef5ca2",
+      "targetId": "e83b1dc0-18e1-4dc4-b3f9-121487e37176",
+      "targetType": "NEWS",
+      "title": "AI搜索时代的官网内容结构升级",
+      "url": "/news/ai-search-website-content-structure",
+      "loc": "https://www.yfyk.com/news/ai-search-website-content-structure",
+      "lastmod": "2026-06-08T04:09:13.741Z",
+      "priority": 0.7,
+      "defaultPriority": 0.7
+    }
+  ],
+  "xmlText": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n  <url>\n    <loc>https://www.yfyk.com/</loc>\n    <lastmod>2026-06-08T04:09:13.675Z</lastmod>\n    <priority>1.00</priority>\n  </url>\n  <url>\n    <loc>https://www.yfyk.com/geo-native-website</loc>\n    <lastmod>2026-06-08T04:09:13.687Z</lastmod>\n    <priority>0.95</priority>\n  </url>\n  <url>\n    <loc>https://www.yfyk.com/ai-friendly-upgrade</loc>\n    <lastmod>2026-06-08T04:09:13.692Z</lastmod>\n    <priority>0.95</priority>\n  </url>\n  <url>\n    <loc>https://www.yfyk.com/enterprise-knowledge-base</loc>\n    <lastmod>2026-06-08T04:09:13.697Z</lastmod>\n    <priority>0.95</priority>\n  </url>\n  <url>\n    <loc>https://www.yfyk.com/about/company</loc>\n    <lastmod>2026-06-08T04:09:13.703Z</lastmod>\n    <priority>0.50</priority>\n  </url>\n  <url>\n    <loc>https://www.yfyk.com/about/patents</loc>\n    <lastmod>2026-06-08T04:09:13.708Z</lastmod>\n    <priority>0.50</priority>\n  </url>\n  <url>\n    <loc>https://www.yfyk.com/about/contact</loc>\n    <lastmod>2026-06-08T04:09:13.713Z</lastmod>\n    <priority>0.50</priority>\n  </url>\n  <url>\n    <loc>https://www.yfyk.com/knowledge</loc>\n    <lastmod>2026-06-08T04:09:13.718Z</lastmod>\n    <priority>0.75</priority>\n  </url>\n  <url>\n    <loc>https://www.yfyk.com/glossary</loc>\n    <lastmod>2026-06-08T04:09:13.722Z</lastmod>\n    <priority>0.75</priority>\n  </url>\n  <url>\n    <loc>https://www.yfyk.com/cases/metrics-fix-test-1780892724</loc>\n    <lastmod>2026-06-08T04:34:49.068Z</lastmod>\n    <priority>0.80</priority>\n  </url>\n  <url>\n    <loc>https://www.yfyk.com/cases/manufacturing-geo-native-rebuild</loc>\n    <lastmod>2026-06-08T04:26:20.553Z</lastmod>\n    <priority>0.80</priority>\n  </url>\n  <url>\n    <loc>https://www.yfyk.com/faq#cea2d2d6-87a4-415a-9949-90b1371f895e</loc>\n    <lastmod>2026-06-08T04:45:24.250Z</lastmod>\n    <priority>0.90</priority>\n  </url>\n  <url>\n    <loc>https://www.yfyk.com/faq#seed-faq-geo-seo-difference</loc>\n    <lastmod>2026-06-08T04:45:30.994Z</lastmod>\n    <priority>0.90</priority>\n  </url>\n  <url>\n    <loc>https://www.yfyk.com/news/ai-search-website-content-structure</loc>\n    <lastmod>2026-06-08T04:09:13.741Z</lastmod>\n    <priority>0.70</priority>\n  </url>\n</urlset>\n",
+  "published": true
+}

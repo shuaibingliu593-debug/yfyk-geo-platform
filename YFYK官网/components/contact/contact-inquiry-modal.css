@@ -1,0 +1,244 @@
+.open-contact-modal-link {
+  cursor: pointer;
+  font: inherit;
+}
+
+/* 仅对文字链样式做 reset，保留 .button 等主按钮原有样式 */
+.open-contact-modal-link:not(.button) {
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+
+.open-contact-modal-link.button,
+.open-contact-modal-link.button-white,
+.open-contact-modal-link.button-small {
+  border: 0;
+  appearance: none;
+  font-family: inherit;
+}
+
+.contact-inquiry-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.contact-inquiry-modal-overlay {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgba(3, 8, 26, 0.48);
+  cursor: pointer;
+}
+
+.contact-inquiry-modal-panel {
+  position: relative;
+  z-index: 1;
+  width: min(720px, 100%);
+  max-height: min(92vh, 920px);
+  overflow-y: auto;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 24px 64px rgba(16, 24, 40, 0.18);
+}
+
+.contact-inquiry-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+  display: flex;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--muted);
+  background: #fff;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+.contact-inquiry-modal-close:hover {
+  border-color: rgba(20, 87, 255, 0.32);
+  color: var(--blue);
+  background: #f6f9ff;
+}
+
+.contact-inquiry-modal-panel .contact-form-card {
+  padding: 32px;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.contact-inquiry-modal-panel .contact-form-head h3 {
+  margin: 0 0 8px;
+  font-size: 24px;
+  letter-spacing: -0.03em;
+}
+
+.contact-inquiry-modal-panel .contact-form-head p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.contact-inquiry-modal-panel .contact-form {
+  margin-top: 28px;
+}
+
+.contact-inquiry-modal-panel .contact-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.contact-inquiry-modal-panel .contact-form-field {
+  min-width: 0;
+}
+
+.contact-inquiry-modal-panel .contact-form-error {
+  margin: 6px 0 0;
+  color: #d92d20;
+  font-size: 12px;
+}
+
+.contact-inquiry-modal-panel .contact-form-actions {
+  margin-top: 22px;
+}
+
+.contact-inquiry-modal-panel .contact-form-submit {
+  width: 100%;
+  justify-content: center;
+}
+
+.contact-inquiry-modal-panel .contact-form-note {
+  margin: 12px 0 0;
+  color: #98a2b3;
+  font-size: 12px;
+  text-align: center;
+}
+
+.contact-form-service {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.contact-form-service a {
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.contact-form-service a:hover {
+  text-decoration: underline;
+}
+
+/* Toast（全站弹窗提交反馈） */
+.contact-toast-host {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  pointer-events: none;
+}
+
+.contact-toast {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 280px;
+  max-width: 420px;
+  padding: 14px 16px;
+  border: 1px solid rgba(20, 87, 255, 0.18);
+  border-radius: 14px;
+  color: #fff;
+  background: linear-gradient(135deg, #071735, #0b2d78);
+  box-shadow: 0 18px 40px rgba(16, 24, 40, 0.18);
+  font-size: 14px;
+  line-height: 1.55;
+  pointer-events: auto;
+  animation: contact-toast-in 0.35s ease both;
+}
+
+.contact-toast.is-error {
+  border-color: rgba(217, 45, 32, 0.28);
+  background: linear-gradient(135deg, #55160c, #912018);
+}
+
+.contact-toast-close {
+  flex: none;
+  padding: 0 4px;
+  border: 0;
+  color: rgba(255, 255, 255, 0.72);
+  background: transparent;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.contact-toast-close:hover {
+  color: #fff;
+}
+
+@keyframes contact-toast-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 620px) {
+  .contact-toast-host {
+    padding: 16px;
+  }
+
+  .contact-toast {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .contact-inquiry-modal {
+    padding: 16px;
+  }
+
+  .contact-inquiry-modal-panel {
+    border-radius: 18px;
+  }
+
+  .contact-inquiry-modal-close {
+    top: 14px;
+    right: 14px;
+  }
+
+  .contact-inquiry-modal-panel .contact-form-card {
+    padding: 24px 20px;
+  }
+
+  .contact-inquiry-modal-panel .contact-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
