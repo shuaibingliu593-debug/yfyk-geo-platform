@@ -26,11 +26,17 @@ export const metadata: Metadata = {
   },
 };
 
-/** 后台发布内容后约 60 秒内同步到官网 */
-export const revalidate = 60;
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 export default async function CasesCenterPage() {
-  const apiCases = await getCases();
+  const { data: apiCases, loadError } = await getCases().then(
+    (data) => ({ data, loadError: false }),
+    (error) => {
+      console.error("[cases] failed to load:", error);
+      return { data: [], loadError: true };
+    },
+  );
   const cases = mapCasesToCenterItems(apiCases);
 
   return (
@@ -38,7 +44,7 @@ export default async function CasesCenterPage() {
       <SchemaInjector id="yfyk-cases-center-schema" schemas={getCasesCenterSchemas(cases)} />
       <MotionEnhancer />
       <ScrollToTop />
-      <CasesCenterOverview cases={cases} />
+      <CasesCenterOverview cases={cases} loadError={loadError} />
     </>
   );
 }

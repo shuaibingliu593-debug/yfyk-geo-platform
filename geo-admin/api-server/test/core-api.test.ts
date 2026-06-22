@@ -20,16 +20,21 @@ async function main() {
     assert(Boolean(login.accessToken), "登录接口应返回 accessToken");
     const token = login.accessToken;
 
+    const caseSlug = `test-case-${Date.now()}`;
     const caseItem = await request<Json>(baseUrl, "/api/cases", {
       method: "POST",
       token,
       body: {
         title: "测试案例",
-        slug: `test-case-${Date.now()}`,
+        slug: caseSlug,
         caseType: "GEO_NATIVE",
         industry: "测试行业",
         content: "测试案例正文",
         excerpt: "测试案例摘要，描述 GEO 配置和案例价值。",
+        metrics: [
+          { label: "AI引用率", value: "37", unit: "%" },
+          { label: "可读取", value: "98", unit: "%" }
+        ],
         status: "DRAFT"
       }
     });
@@ -93,8 +98,18 @@ async function main() {
     const audit = await request<{ count: number }>(baseUrl, "/api/v1/audit/rescore", { method: "POST", token });
     assert(audit.count > 0, "GEO 重新评分应返回评分对象数量");
 
-    const publicCases = await request<{ success: boolean; data: { items: unknown[] } }>(baseUrl, "/api/v1/cases");
+    const publicCases = await request<{ success: boolean; data: { items: Array<{ slug: string; metrics: unknown }> } }>(baseUrl, "/api/v1/cases");
     assert(publicCases.success && publicCases.data.items.length > 0, "公开案例接口应返回 published 内容");
+    const publicCaseInList = publicCases.data.items.find((item) => item.slug === caseSlug);
+    assert(publicCaseInList, "公开案例列表应包含新发布案例");
+    const publicCaseDetail = await request<{ success: boolean; data: { metrics: unknown } }>(
+      baseUrl,
+      `/api/v1/cases/${caseSlug}`
+    );
+    assert(
+      JSON.stringify(publicCaseInList.metrics) === JSON.stringify(publicCaseDetail.data.metrics),
+      "公开案例列表与详情应返回完全一致的 metrics"
+    );
 
     await request(baseUrl, `/api/cases/${caseItem.id}`, { method: "DELETE", token });
     await request(baseUrl, `/api/faqs/${faqItem.id}`, { method: "DELETE", token });

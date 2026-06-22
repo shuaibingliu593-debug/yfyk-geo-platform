@@ -10,6 +10,7 @@
     "generate:llms": "node --experimental-strip-types scripts/generate-llms.mjs",
     "start": "next start",
     "lint": "eslint .",
+    "test:metrics": "node --experimental-strip-types --test test/case-metrics.test.ts",
     "cla-check": "node scripts/cla-check.mjs",
     "check:static-pages": "node --experimental-strip-types ../shared/scripts/check-static-pages.mjs",
     "check:faq-content": "node --experimental-strip-types ../shared/scripts/check-faq-content.mjs"

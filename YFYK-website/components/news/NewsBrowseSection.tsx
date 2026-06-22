@@ -11,9 +11,10 @@ import {
 
 interface NewsBrowseSectionProps {
   articles: NewsArticle[];
+  loadError?: boolean;
 }
 
-export function NewsBrowseSection({ articles }: NewsBrowseSectionProps) {
+export function NewsBrowseSection({ articles, loadError = false }: NewsBrowseSectionProps) {
   const [activeCategory, setActiveCategory] = useState<NewsCategory>("all");
   const filteredArticles = useMemo(
     () => filterNewsByCategory(articles, activeCategory),
@@ -43,7 +44,9 @@ export function NewsBrowseSection({ articles }: NewsBrowseSectionProps) {
           </div>
         </div>
         <div className="news-article-grid" role="tabpanel">
-          {filteredArticles.length === 0 ? (
+          {loadError ? (
+            <p className="news-empty" role="status">资讯内容暂时不可用，请稍后刷新。</p>
+          ) : filteredArticles.length === 0 ? (
             <p className="news-empty" role="status">
               暂无已发布资讯，请稍后再来查看。
             </p>

@@ -10,8 +10,8 @@ type Props = { params: Promise<{ slug: string }> };
 
 const resolveSlug = async ({ params }: Props) => (await params).slug;
 
-/** 后台发布内容后约 60 秒内同步到官网 */
-export const revalidate = 60;
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
   const slug = await resolveSlug(props);

@@ -28,9 +28,16 @@ export const metadata: Metadata = {
 
 /** FAQ 由后台 API 动态提供，避免 build 时 API 不可用导致静态页为空 */
 export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 export default async function FaqPage() {
-  const apiFaqs = await getFaqs();
+  const { data: apiFaqs, loadError } = await getFaqs().then(
+    (data) => ({ data, loadError: false }),
+    (error) => {
+      console.error("[faq] failed to load:", error);
+      return { data: [], loadError: true };
+    },
+  );
   const faqItems = mapFaqsToItems(apiFaqs);
 
   if (faqItems.length === 0) {
@@ -45,7 +52,7 @@ export default async function FaqPage() {
       <SchemaInjector id="yfyk-faq-page-schema" schemas={getFaqPageSchemas(faqItems)} />
       <MotionEnhancer />
       <ScrollToTop />
-      <FaqOverview faqItems={faqItems} />
+      <FaqOverview faqItems={faqItems} loadError={loadError} />
     </>
   );
 }

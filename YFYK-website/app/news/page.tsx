@@ -26,11 +26,17 @@ export const metadata: Metadata = {
   },
 };
 
-/** 后台发布内容后约 60 秒内同步到官网 */
-export const revalidate = 60;
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 export default async function NewsPage() {
-  const apiNews = await getNews();
+  const { data: apiNews, loadError } = await getNews().then(
+    (data) => ({ data, loadError: false }),
+    (error) => {
+      console.error("[news] failed to load:", error);
+      return { data: [], loadError: true };
+    },
+  );
   const articles = mapNewsToArticles(apiNews);
 
   return (
@@ -38,7 +44,7 @@ export default async function NewsPage() {
       <SchemaInjector id="yfyk-news-page-schema" schemas={getNewsPageSchemas(articles)} />
       <MotionEnhancer />
       <ScrollToTop />
-      <NewsOverview articles={articles} />
+      <NewsOverview articles={articles} loadError={loadError} />
     </>
   );
 }

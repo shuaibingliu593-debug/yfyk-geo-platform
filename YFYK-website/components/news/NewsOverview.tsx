@@ -9,9 +9,10 @@ import { siteConfig } from "@/lib/content/home";
 
 interface NewsOverviewProps {
   articles: NewsArticle[];
+  loadError?: boolean;
 }
 
-export function NewsOverview({ articles }: NewsOverviewProps) {
+export function NewsOverview({ articles, loadError = false }: NewsOverviewProps) {
   const version = siteConfig.version;
   const heroStackCards = articles.slice(0, 3).map((article) => ({
     categoryLabel: article.categoryLabel,
@@ -55,7 +56,7 @@ export function NewsOverview({ articles }: NewsOverviewProps) {
           summary="按 GEO洞察、AI搜索、企业知识库与公司动态浏览资讯内容。"
           version={version}
         >
-          <NewsBrowseSection articles={articles} />
+          <NewsBrowseSection articles={articles} loadError={loadError} />
         </AISection>
 
         <AISection

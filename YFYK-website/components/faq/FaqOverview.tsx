@@ -10,9 +10,10 @@ import { siteConfig } from "@/lib/content/home";
 
 interface FaqOverviewProps {
   faqItems: FaqItem[];
+  loadError?: boolean;
 }
 
-export function FaqOverview({ faqItems }: FaqOverviewProps) {
+export function FaqOverview({ faqItems, loadError = false }: FaqOverviewProps) {
   const version = siteConfig.version;
   const heroStackCards = faqItems.slice(0, 3).map((item) => ({
     label: faqCategoryLabels[item.category],
@@ -57,15 +58,13 @@ export function FaqOverview({ faqItems }: FaqOverviewProps) {
           summary="按主题分类浏览 GEO、AI搜索与企业知识库相关标准答案。"
           version={version}
         >
-          {faqItems.length === 0 ? (
+          {loadError || faqItems.length === 0 ? (
             <section className="faq-band faq-browse-band is-soft" id="faq-list">
               <div className="shell">
                 <div className="faq-empty" role="status">
                   <p>
-                    暂未加载到 FAQ 内容。请确认后台 api-server 已启动（默认端口 3001），并已执行{" "}
-                    <code>npm run prisma:seed</code> 导入数据后刷新本页。
+                    {loadError ? "FAQ 内容暂时不可用，请稍后刷新。" : "暂无已发布 FAQ。"}
                   </p>
-                  <p>官网 FAQ 地址：<code>http://localhost:3002/faq</code>（非后台 3000 端口）。</p>
                 </div>
               </div>
             </section>

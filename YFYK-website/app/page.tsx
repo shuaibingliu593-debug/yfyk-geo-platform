@@ -11,19 +11,13 @@ import { SiteHeader } from "@/components/ui/SiteHeader";
 import { MotionEnhancer } from "@/components/ui/MotionEnhancer";
 import { SchemaInjector } from "@/components/seo/SchemaInjector";
 import { getHomePageSchemas } from "@/lib/schema/home";
-import {
-  homeContent,
-  caseStudies,
-  geoPracticeStats,
-  siteConfig,
-} from "@/lib/content/home";
+import { homeContent, geoPracticeStats, siteConfig } from "@/lib/content/home";
 import {
   getHomeRecommendedCases,
   mapApiCasesToHomeCases,
 } from "@/lib/api";
-import type { CaseStudy } from "@/lib/content/types";
-
-export const revalidate = 60;
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 export const metadata: Metadata = {
   alternates: {
@@ -41,17 +35,15 @@ const section = (id: string) => {
 };
 const aiSummary = (id: string) => section(id).summary;
 
-function staticFallbackCases(): CaseStudy[] {
-  return caseStudies.slice(0, 5).map((item) => ({
-    ...item,
-    href: `/cases/${item.slug}`,
-  }));
-}
-
 export default async function Home() {
-  const apiCases = await getHomeRecommendedCases();
-  const featuredCases =
-    apiCases === null ? staticFallbackCases() : mapApiCasesToHomeCases(apiCases);
+  const { data: apiCases, loadError: casesLoadError } = await getHomeRecommendedCases().then(
+    (data) => ({ data, loadError: false }),
+    (error) => {
+      console.error("[home] failed to load recommended cases:", error);
+      return { data: [], loadError: true };
+    },
+  );
+  const featuredCases = mapApiCasesToHomeCases(apiCases);
 
   return (
     <>
@@ -86,7 +78,11 @@ export default async function Home() {
               <div><p className="eyebrow"><span /> FEATURED CASES</p><h2>{section("featured-cases").title}</h2></div>
               <p>以可验证的企业事实为基础，围绕不同业务场景建立清晰、可信、可持续运营的 AI 知识入口。</p>
             </div>
-            <CaseGallery cases={featuredCases} compact revealOnHover />
+            {casesLoadError ? (
+              <p className="dynamic-content-unavailable" role="status">案例内容暂时不可用，请稍后刷新。</p>
+            ) : (
+              <CaseGallery cases={featuredCases} compact revealOnHover />
+            )}
             <div className="case-more"><Link className="button" href="/cases">查看更多案例 <Icon name="arrow" size={17} /></Link></div>
           </div>
         </section>

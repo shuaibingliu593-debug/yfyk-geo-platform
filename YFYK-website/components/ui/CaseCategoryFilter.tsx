@@ -11,9 +11,10 @@ import {
 
 interface CaseCategoryFilterProps {
   cases: CaseCenterItem[];
+  loadError?: boolean;
 }
 
-export function CaseCategoryFilter({ cases }: CaseCategoryFilterProps) {
+export function CaseCategoryFilter({ cases, loadError = false }: CaseCategoryFilterProps) {
   const [activeCategory, setActiveCategory] = useState<CaseCategoryFilter>("all");
   const filteredCases = useMemo(
     () => filterCasesByCategory(cases, activeCategory),
@@ -42,7 +43,9 @@ export function CaseCategoryFilter({ cases }: CaseCategoryFilterProps) {
         </div>
       </div>
       <div className="cc-case-grid" role="tabpanel">
-        {filteredCases.length === 0 ? (
+        {loadError ? (
+          <p className="cc-empty" role="status">案例内容暂时不可用，请稍后刷新。</p>
+        ) : filteredCases.length === 0 ? (
           <p className="cc-empty" role="status">
             暂无已发布案例，请稍后再来查看。
           </p>

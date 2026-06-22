@@ -3,6 +3,7 @@
  * 环境变量 NEXT_PUBLIC_API_BASE_URL 指向 api-server（默认开发环境 http://localhost:3001）。
  */
 
+import { parseCaseMetrics } from "@/lib/case-metrics";
 import type { CaseCenterItem } from "@/lib/content/cases-center";
 import type { CaseDetailMetric, CaseDetailView } from "@/lib/content/case-detail";
 import type { CaseLibraryCase, CaseServiceType } from "@/lib/content/case-library";
@@ -10,8 +11,25 @@ import type { FaqItem, FaqCategory } from "@/lib/content/faq";
 import type { NewsArticle } from "@/lib/content/news";
 import type { CaseStudy } from "@/lib/content/types";
 
-/** 后台 API 根地址，禁止写死 localhost，必须通过环境变量配置 */
-export const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL ?? "";
+/** 浏览器仅用于提交留资；服务端优先使用 Render 内网 API 地址。 */
+export const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL?.trim() ?? "";
+
+function serverApiBaseUrl(): string {
+  const configured = (process.env.API_INTERNAL_BASE_URL ?? process.env.NEXT_PUBLIC_API_BASE_URL)?.trim() ?? "";
+  if (!configured) throw new ApiError("未配置 API_INTERNAL_BASE_URL 或 NEXT_PUBLIC_API_BASE_URL", 0);
+
+  let url: URL;
+  try {
+    url = new URL(configured);
+  } catch {
+    throw new ApiError("后台 API 地址格式无效", 0);
+  }
+  if (!['http:', 'https:'].includes(url.protocol)) throw new ApiError("后台 API 地址必须使用 HTTP(S)", 0);
+  if (process.env.NODE_ENV === "production" && ["localhost", "127.0.0.1", "::1"].includes(url.hostname)) {
+    throw new ApiError("生产环境后台 API 不能指向 localhost", 0);
+  }
+  return configured.replace(/\/$/, "");
+}
 
 /** 公开 v1 接口统一响应包装 */
 interface ApiEnvelope<T> {
@@ -120,21 +138,17 @@ function parseErrorMessage(payload: unknown, fallback: string): string {
 
 /** 底层 fetch，带超时与 JSON 解析 */
 async function apiFetch<T>(path: string, init?: RequestInit): Promise<T> {
-  if (!apiBaseUrl) {
-    throw new ApiError("未配置 NEXT_PUBLIC_API_BASE_URL", 0);
-  }
-
-  const url = `${apiBaseUrl.replace(/\/$/, "")}${path}`;
+  const url = `${serverApiBaseUrl()}${path}`;
   let response: Response;
 
   try {
     response = await fetch(url, {
       ...init,
+      cache: "no-store",
       headers: {
         Accept: "application/json",
         ...(init?.headers ?? {}),
       },
-      next: { revalidate: 60 },
     });
   } catch {
     throw new ApiError("无法连接后台 API，请确认 api-server 已启动", 0);
@@ -153,7 +167,6 @@ async function apiFetch<T>(path: string, init?: RequestInit): Promise<T> {
 
 /** 拉取全部分页数据（单页最大 100 条） */
 async function fetchAllPages<T>(buildPath: (page: number) => string): Promise<T[]> {
-  const pageSize = 100;
   let page = 1;
   const allItems: T[] = [];
 
@@ -173,12 +186,7 @@ async function fetchAllPages<T>(buildPath: (page: number) => string): Promise<T[
 
 /** 获取全部已发布案例 */
 export async function getCases(): Promise<ApiCase[]> {
-  try {
-    return await fetchAllPages<ApiCase>((page) => `/api/v1/cases?page=${page}&pageSize=100`);
-  } catch (error) {
-    console.error("[api] getCases failed:", error);
-    return [];
-  }
+  return fetchAllPages<ApiCase>((page) => `/api/v1/cases?page=${page}&pageSize=100`);
 }
 
 /** 按 slug 获取单个已发布案例 */
@@ -191,19 +199,13 @@ export async function getCaseBySlug(slug: string): Promise<ApiCase | null> {
     return envelope.data;
   } catch (error) {
     if (error instanceof ApiError && error.status === 404) return null;
-    console.error("[api] getCaseBySlug failed:", error);
-    return null;
+    throw error;
   }
 }
 
 /** 获取全部已发布资讯 */
 export async function getNews(): Promise<ApiNews[]> {
-  try {
-    return await fetchAllPages<ApiNews>((page) => `/api/v1/news?page=${page}&pageSize=100`);
-  } catch (error) {
-    console.error("[api] getNews failed:", error);
-    return [];
-  }
+  return fetchAllPages<ApiNews>((page) => `/api/v1/news?page=${page}&pageSize=100`);
 }
 
 /** 按 slug 获取单篇已发布资讯 */
@@ -216,31 +218,20 @@ export async function getNewsBySlug(slug: string): Promise<ApiNews | null> {
     return envelope.data;
   } catch (error) {
     if (error instanceof ApiError && error.status === 404) return null;
-    console.error("[api] getNewsBySlug failed:", error);
-    return null;
+    throw error;
   }
 }
 
 /** 获取首页推荐案例（featured + PUBLISHED，最多 5 条） */
-export async function getHomeRecommendedCases(): Promise<ApiCase[] | null> {
-  try {
-    const envelope = await apiFetch<ApiEnvelope<HomeRecommendationsPayload>>("/api/v1/home/recommendations");
-    if (!envelope.success || !envelope.data) return [];
-    return envelope.data.cases ?? [];
-  } catch (error) {
-    console.error("[api] getHomeRecommendedCases failed:", error);
-    return null;
-  }
+export async function getHomeRecommendedCases(): Promise<ApiCase[]> {
+  const envelope = await apiFetch<ApiEnvelope<HomeRecommendationsPayload>>("/api/v1/home/recommendations");
+  if (!envelope.success || !envelope.data) return [];
+  return envelope.data.cases ?? [];
 }
 
 /** 获取全部已发布 FAQ */
 export async function getFaqs(): Promise<ApiFaq[]> {
-  try {
-    return await fetchAllPages<ApiFaq>((page) => `/api/v1/faqs?page=${page}&pageSize=100`);
-  } catch (error) {
-    console.error("[api] getFaqs failed:", error);
-    return [];
-  }
+  return fetchAllPages<ApiFaq>((page) => `/api/v1/faqs?page=${page}&pageSize=100`);
 }
 
 /* ---------- 后台字段 → 官网 UI 类型映射 ---------- */
@@ -266,43 +257,9 @@ const CASE_TYPE_SERVICE: Record<string, CaseServiceType> = {
   BENCHMARK: "GEO原生建站",
 };
 
-type ParsedCaseMetric = { label: string; value: string };
-
-/** 解析后台 metrics（数组 [{label,value,unit}] 或键值对象） */
-function parseApiMetrics(metrics: unknown, limit?: number): ParsedCaseMetric[] {
-  if (!metrics) return [];
-
-  let parsed: ParsedCaseMetric[] = [];
-
-  if (Array.isArray(metrics)) {
-    parsed = metrics
-      .map((item) => {
-        if (!item || typeof item !== "object") return null;
-        const record = item as { label?: string; value?: string | number; unit?: string };
-        const label = String(record.label ?? "").trim();
-        const rawValue = String(record.value ?? "").trim();
-        const unit = String(record.unit ?? "").trim();
-        if (!label || !rawValue) return null;
-        return { label, value: unit ? `${rawValue}${unit}` : rawValue };
-      })
-      .filter((item): item is ParsedCaseMetric => item !== null);
-  } else if (typeof metrics === "object") {
-    parsed = Object.entries(metrics as Record<string, unknown>)
-      .map(([label, value]) => {
-        const trimmedLabel = label.trim();
-        const trimmedValue = String(value ?? "").trim();
-        if (!trimmedLabel || !trimmedValue) return null;
-        return { label: trimmedLabel, value: trimmedValue };
-      })
-      .filter((item): item is ParsedCaseMetric => item !== null);
-  }
-
-  return limit !== undefined ? parsed.slice(0, limit) : parsed;
-}
-
 /** 从 metrics JSON 提取案例列表展示指标（最多 3 条，无录入则返回空数组） */
 function buildCaseMetrics(metrics: unknown): CaseCenterItem["metrics"] {
-  return parseApiMetrics(metrics, 3);
+  return parseCaseMetrics(metrics).slice(0, 3);
 }
 
 /** 后台案例 → 案例中心列表卡片 */
@@ -333,7 +290,7 @@ export function mapCasesToCenterItems(cases: ApiCase[]): CaseCenterItem[] {
 
 /** 从 metrics JSON 提取首页案例卡片指标（最多 3 条） */
 function buildHomeCaseMetrics(metrics: unknown): CaseStudy["metrics"] {
-  return parseApiMetrics(metrics, 3);
+  return parseCaseMetrics(metrics).slice(0, 3);
 }
 
 /** 后台案例 → 首页 CaseGallery 卡片 */
@@ -369,7 +326,7 @@ export function mapApiCasesToHomeCases(cases: ApiCase[]): CaseStudy[] {
 
 /** 后台 metrics → 案例详情指标（支持数组 [{label,value,unit}] 与旧版键值对象） */
 function mapApiCaseMetrics(metrics: unknown): CaseDetailMetric[] {
-  return parseApiMetrics(metrics);
+  return parseCaseMetrics(metrics);
 }
 
 /** 后台案例 → 案例详情页视图 */

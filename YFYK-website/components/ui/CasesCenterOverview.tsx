@@ -11,9 +11,10 @@ const version = siteConfig.version;
 
 interface CasesCenterOverviewProps {
   cases: CaseCenterItem[];
+  loadError?: boolean;
 }
 
-export function CasesCenterOverview({ cases }: CasesCenterOverviewProps) {
+export function CasesCenterOverview({ cases, loadError = false }: CasesCenterOverviewProps) {
   return (
     <>
       <SiteHeader />
@@ -59,7 +60,7 @@ export function CasesCenterOverview({ cases }: CasesCenterOverviewProps) {
                 </div>
                 <p>选择不同服务类型，查看对应项目实践路径。</p>
               </div>
-              <CaseCategoryFilter cases={cases} />
+              <CaseCategoryFilter cases={cases} loadError={loadError} />
             </div>
           </section>
         </AISection>
