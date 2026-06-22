@@ -30,4 +30,5 @@ test("supports legacy key/value metrics", () => {
 test("returns an empty list for unsupported values", () => {
   assert.deepEqual(parseCaseMetrics(null), []);
   assert.deepEqual(parseCaseMetrics("20%"), []);
+  assert.deepEqual(parseCaseMetrics({ "AI引用率": { value: "", unit: "%" } }), []);
 });

@@ -21,6 +21,7 @@ export function parseCaseMetrics(metrics: unknown): ParsedCaseMetric[] {
   if (typeof metrics === "object") {
     return Object.entries(metrics as Record<string, unknown>)
       .map(([label, value]) => {
+        if (typeof value !== "string" && typeof value !== "number") return null;
         const normalizedLabel = label.trim();
         const normalizedValue = String(value ?? "").trim();
         if (!normalizedLabel || !normalizedValue) return null;

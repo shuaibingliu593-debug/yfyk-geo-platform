@@ -61,7 +61,7 @@ const emptyCase: CaseItem = {
   challenge: "",
   solution: "",
   results: "",
-  metrics: [{ label: "AI引用率", value: "", unit: "%" }],
+  metrics: [],
   excerpt: "",
   content: "",
   coverImage: "",
@@ -597,7 +597,7 @@ function normalizeMetrics(value: unknown): CaseMetric[] {
       };
     });
   }
-  return [{ label: "AI引用率", value: "", unit: "%" }];
+  return [];
 }
 
 function toApiPayload(item: CaseItem) {
@@ -612,7 +612,13 @@ function toApiPayload(item: CaseItem) {
     challenge: item.challenge || undefined,
     solution: item.solution || undefined,
     results: item.results || undefined,
-    metrics: item.metrics.filter((metric) => metric.label || metric.value),
+    metrics: item.metrics
+      .map((metric) => ({
+        label: metric.label.trim(),
+        value: metric.value.trim(),
+        unit: metric.unit.trim()
+      }))
+      .filter((metric) => metric.label.length > 0 && metric.value.length > 0),
     excerpt: item.excerpt || undefined,
     content: item.content.trim(),
     coverImage: item.coverImage || undefined,
